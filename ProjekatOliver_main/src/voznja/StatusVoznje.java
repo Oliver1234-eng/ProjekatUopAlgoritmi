@@ -2,11 +2,11 @@ package voznja;
 
 public enum StatusVoznje {
 	
-	KREIRANA,
-	KREIRANA_NA_CEKANJU,
-	DODELJENA,
-	PRIHVACENA,
-	ZAVRSENA,
-	ODBIJENA
+	KREIRANA,                //0
+	KREIRANA_NA_CEKANJU,     //1
+	DODELJENA,               //2
+	PRIHVACENA,              //3
+	ZAVRSENA,                //4
+	ODBIJENA                 //5
 
 }

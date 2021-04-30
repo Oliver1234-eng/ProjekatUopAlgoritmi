@@ -2,7 +2,7 @@ package automobil;
 
 public class Automobil {
 	
-	private int idAutomobila;
+	private String idAutomobila;
 	private Model model;
 	private Proizvodjac proizvodjac;
 	private VrstaAutomobila vrstaAutomobila;
@@ -11,7 +11,7 @@ public class Automobil {
 	private int brojTaksiVozila;
 	private boolean obrisan;
 	
-	public Automobil(int idAutomobila, Model model, Proizvodjac proizvodjac, VrstaAutomobila vrstaAutomobila,
+	public Automobil(String idAutomobila, Model model, Proizvodjac proizvodjac, VrstaAutomobila vrstaAutomobila,
 			int godinaProizvodnje, String brojRegistarskeOznake, int brojTaksiVozila, boolean obrisan) {
 		super();
 		this.idAutomobila = idAutomobila;
@@ -26,7 +26,7 @@ public class Automobil {
 	
 	public Automobil() {
 		super();
-		this.idAutomobila = 0;
+		this.idAutomobila = "";
 		this.model = Model.Corsa;
 		this.proizvodjac = Proizvodjac.Opel;
 		this.vrstaAutomobila = VrstaAutomobila.putnickiAutomobil;
@@ -36,11 +36,11 @@ public class Automobil {
 		this.obrisan = false;
 	}
 
-	public int getIdAutomobila() {
+	public String getIdAutomobila() {
 		return idAutomobila;
 	}
 	
-	public void setIdAutomobila(int idAutomobila) {
+	public void setIdAutomobila(String idAutomobila) {
 		this.idAutomobila = idAutomobila;
 	}
 	
@@ -100,14 +100,10 @@ public class Automobil {
 
 	@Override
 	public String toString() {
-		return "Automobil \nID automobila: " + idAutomobila +
-				"\nModel automobila " + model +
-				"\nProizvodjac automobila" + proizvodjac +
-				"\nVrsta automobila:  " + vrstaAutomobila + 
-				"\nGodina proizvodnje:  " + godinaProizvodnje +
-				"\nBroj registarske oznake:" + brojRegistarskeOznake +
-				"\nBroj taksi vozila" + brojTaksiVozila +
-				"\nObrisan: " + obrisan;
+		return "Automobil [idAutomobila=" + idAutomobila + ", model=" + model + ", proizvodjac=" + proizvodjac
+				+ ", vrstaAutomobila=" + vrstaAutomobila + ", godinaProizvodnje=" + godinaProizvodnje
+				+ ", brojRegistarskeOznake=" + brojRegistarskeOznake + ", brojTaksiVozila=" + brojTaksiVozila
+				+ ", obrisan=" + obrisan + "]";
 	}
 
 }

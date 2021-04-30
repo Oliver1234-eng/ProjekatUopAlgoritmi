@@ -2,7 +2,7 @@ package automobil;
 
 public enum VrstaAutomobila {
 	
-	putnickiAutomobil,
-	kombiVozilo
+	putnickiAutomobil,   //0
+	kombiVozilo          //1
 
 }

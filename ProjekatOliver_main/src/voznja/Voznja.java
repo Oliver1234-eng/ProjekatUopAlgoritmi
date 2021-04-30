@@ -5,7 +5,7 @@ import osobe.Vozac;
 
 public class Voznja {
 	
-	private int idVoznje;
+	private String idVoznje;
 	private String datumIVremePorudzbine;
 	private String adresaPolaska;
 	private String adresaDestinacije;
@@ -14,13 +14,12 @@ public class Voznja {
 	private double brojPredjenihKilometara;
 	private String trajanjeVoznje;
 	private StatusVoznje statusVoznje;
-	private KakoJeVoznjaPorucena kakoJeVoznjaPorucena;
 	private boolean obrisan;
 	
 	
-	public Voznja(int idVoznje, String datumIVremePorudzbine, String adresaPolaska, String adresaDestinacije,
+	public Voznja(String idVoznje, String datumIVremePorudzbine, String adresaPolaska, String adresaDestinacije,
 			Musterija imeMusterije, Vozac imeVozaca, double brojPredjenihKilometara, String trajanjeVoznje,
-			StatusVoznje statusVoznje, KakoJeVoznjaPorucena kakoJeVoznjaPorucena, boolean obrisan) {
+			StatusVoznje statusVoznje, boolean obrisan) {
 		super();
 		this.idVoznje = idVoznje;
 		this.datumIVremePorudzbine = datumIVremePorudzbine;
@@ -31,13 +30,12 @@ public class Voznja {
 		this.brojPredjenihKilometara = brojPredjenihKilometara;
 		this.trajanjeVoznje = trajanjeVoznje;
 		this.statusVoznje = statusVoznje;
-		this.kakoJeVoznjaPorucena = kakoJeVoznjaPorucena;
 		this.obrisan = obrisan;
 	}
 	
 	public Voznja() {
 		super();
-		this.idVoznje = 0;
+		this.idVoznje = "";
 		this.datumIVremePorudzbine = "";
 		this.adresaPolaska = "";
 		this.adresaDestinacije = "";
@@ -46,15 +44,14 @@ public class Voznja {
 		this.brojPredjenihKilometara = 0;
 		this.trajanjeVoznje = "";
 		this.statusVoznje = StatusVoznje.KREIRANA;
-		this.kakoJeVoznjaPorucena = KakoJeVoznjaPorucena.telefonskiPoziv;
 		this.obrisan = false;
 	}
 
-	public int getIdVoznje() {
+	public String getIdVoznje() {
 		return idVoznje;
 	}
 	
-	public void setIdVoznje(int idVoznje) {
+	public void setIdVoznje(String idVoznje) {
 		this.idVoznje = idVoznje;
 	}
 	
@@ -122,14 +119,6 @@ public class Voznja {
 		this.statusVoznje = statusVoznje;
 	}
 	
-	public KakoJeVoznjaPorucena getKakoJeVoznjaPorucena() {
-		return kakoJeVoznjaPorucena;
-	}
-	
-	public void setKakoJeVoznjaPorucena(KakoJeVoznjaPorucena kakoJeVoznjaPorucena) {
-		this.kakoJeVoznjaPorucena = kakoJeVoznjaPorucena;
-	}
-	
 	public boolean isObrisan() {
 		return obrisan;
 	}
@@ -140,17 +129,13 @@ public class Voznja {
 
 	@Override
 	public String toString() {
-		return "Voznja \nID voznje: " + idVoznje +
-				"\nDatum i vreme porudzbine:  " + datumIVremePorudzbine +
-				"\nAdresa polaska: " + adresaPolaska +
-				"\nAdresa destinacije: " + adresaDestinacije + 
-				"\nIme musterije: " + imeMusterije +
-				"\nIme vozaca: " + imeVozaca +
-				"\nBroj predjenih kilometara: " + brojPredjenihKilometara +
-				"\nTrajanje voznje: " + trajanjeVoznje +
-				"\nStatus voznje: " + statusVoznje +
-				"\nKako je voznja porucena: " + kakoJeVoznjaPorucena +
-				"\nObrisan: " + obrisan;
+		return "Voznja [idVoznje=" + idVoznje + ", datumIVremePorudzbine=" + datumIVremePorudzbine + ", adresaPolaska="
+				+ adresaPolaska + ", adresaDestinacije=" + adresaDestinacije + ", imeMusterije=" + imeMusterije
+				+ ", imeVozaca=" + imeVozaca + ", brojPredjenihKilometara=" + brojPredjenihKilometara
+				+ ", trajanjeVoznje=" + trajanjeVoznje + ", statusVoznje=" + statusVoznje + ", obrisan=" + obrisan
+				+ "]";
 	}
+	
+	
 
 }
