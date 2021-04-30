@@ -8,4 +8,5 @@
 004|Username|Password|Ime|Prezime|JMBG|Adresa|0|0638845671|false|55000.6|12|null
 003|TestVozac|testVozac|testVozac|testVozac|testVozac|testVozac|1|0638924371|false|60000.6|10|null
 004|Username|Password|Ime|Prezime|JMBG|Adresa|0|0638845671|false|55000.6|12|null
+003|TestVozac|testVozac|testVozac|testVozac|testVozac|testVozac|1|0638924371|false|60000.6|10|null
 003|TestVozac|testVozac|testVozac|testVozac|testVozac|testVozac|1|0638924371|false|60000.6|10|Automobil [idAutomobila=001, model=A8, proizvodjac=AlfaRomeo, vrstaAutomobila=putnickiAutomobil, godinaProizvodnje=2010, brojRegistarskeOznake=NS-100-DJ, brojTaksiVozila=12, obrisan=false]
