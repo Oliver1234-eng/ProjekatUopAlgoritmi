@@ -2,7 +2,7 @@ package osobe;
 
 public enum Pol {
 	
-	zenski,
-	muski
+	zenski,    //0
+	muski      //1
 
 }

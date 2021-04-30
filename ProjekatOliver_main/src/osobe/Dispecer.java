@@ -4,22 +4,22 @@ public class Dispecer extends Korisnik {
 	
 	private double plata;
 	private int brojTelefonskeLinije;
-	private OdeljenjeDispecer odeljenje;
+	private OdeljenjeDispecer odeljenjeDispecer;
 	
-	public Dispecer(int idKorisnika, String korisnickoIme, String lozinka, String ime, String prezime, String JMBG,
+	public Dispecer(String redniBrojKorisnika, String korisnickoIme, String lozinka, String ime, String prezime, String JMBG,
 			String adresa, Pol pol, String brojTelefona, boolean obrisan, double plata, int brojTelefonskeLinije,
-			OdeljenjeDispecer odeljenje) {
-		super(idKorisnika, korisnickoIme, lozinka, ime, prezime, JMBG, adresa, pol, brojTelefona, obrisan);
+			OdeljenjeDispecer odeljenjeDispecer) {
+		super(redniBrojKorisnika, korisnickoIme, lozinka, ime, prezime, JMBG, adresa, pol, brojTelefona, obrisan);
 		this.plata = plata;
 		this.brojTelefonskeLinije = brojTelefonskeLinije;
-		this.odeljenje = odeljenje;
+		this.odeljenjeDispecer = odeljenjeDispecer;
 	}
 	
 	public Dispecer() {
 		super();
 		this.plata = 0;
 		this.brojTelefonskeLinije = 0;
-		this.odeljenje = OdeljenjeDispecer.odeljenjeZaPrijemReklamacije;
+		this.odeljenjeDispecer = OdeljenjeDispecer.odeljenjeZaPrijemReklamacije;
 	}
 	
 	public double getPlata() {
@@ -38,29 +38,20 @@ public class Dispecer extends Korisnik {
 		this.brojTelefonskeLinije = brojTelefonskeLinije;
 	}
 	
-	public OdeljenjeDispecer getOdeljenje() {
-		return odeljenje;
+	public OdeljenjeDispecer getOdeljenjeDispecer() {
+		return odeljenjeDispecer;
 	}
 	
-	public void setOdeljenje(OdeljenjeDispecer odeljenje) {
-		this.odeljenje = odeljenje;
+	public void setOdeljenjeDispecer(OdeljenjeDispecer odeljenjeDispecer) {
+		this.odeljenjeDispecer = odeljenjeDispecer;
 	}
 
 	@Override
 	public String toString() {
-		return "DISPECER \nID korisnika: " + idKorisnika +
-				"\nKorisnicko ime " + korisnickoIme +
-				"\nLozinka" + lozinka +
-				"\nIme " + ime + 
-				"\nPrezime: " + prezime +
-				"\nJMBG: " + JMBG +
-				"\nAdresa: " + adresa +
-				"\nPol: " + pol +
-				"\nBroj telefona: " + brojTelefona +
-				"\nPlata: " + plata +
-				"\nBroj telefonske linije: " + brojTelefonskeLinije +
-				"\nOdeljenje: " + odeljenje +
-				"\nObrisan: " + obrisan;
+		return "Dispecer [plata=" + plata + ", brojTelefonskeLinije=" + brojTelefonskeLinije + ", odeljenjeDispecer="
+				+ odeljenjeDispecer + ", RedniBrojKorisnika=" + redniBrojKorisnika + ", korisnickoIme=" + korisnickoIme + ", lozinka="
+				+ lozinka + ", ime=" + ime + ", prezime=" + prezime + ", JMBG=" + JMBG + ", adresa=" + adresa + ", pol="
+				+ pol + ", brojTelefona=" + brojTelefona + ", obrisan=" + obrisan + "]";
 	}
 	
 

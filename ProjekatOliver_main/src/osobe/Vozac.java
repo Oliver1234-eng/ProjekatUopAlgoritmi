@@ -8,12 +8,10 @@ public class Vozac extends Korisnik {
 	private int brojClanskeKarte;
 	private Automobil automobil;
 	
-	
-	
-	public Vozac(int idKorisnika, String korisnickoIme, String lozinka, String ime, String prezime, String JMBG,
+	public Vozac(String redniBrojKorisnika, String korisnickoIme, String lozinka, String ime, String prezime, String JMBG,
 			String adresa, Pol pol, String brojTelefona, boolean obrisan, double plata, int brojClanskeKarte,
 			Automobil automobil) {
-		super(idKorisnika, korisnickoIme, lozinka, ime, prezime, JMBG, adresa, pol, brojTelefona, obrisan);
+		super(redniBrojKorisnika, korisnickoIme, lozinka, ime, prezime, JMBG, adresa, pol, brojTelefona, obrisan);
 		this.plata = plata;
 		this.brojClanskeKarte = brojClanskeKarte;
 		this.automobil = automobil;
@@ -52,19 +50,10 @@ public class Vozac extends Korisnik {
 
 	@Override
 	public String toString() {
-		return "Vozac \nID korisnika: " + idKorisnika +
-				"\nKorisnicko ime " + korisnickoIme +
-				"\nLozinka" + lozinka +
-				"\nIme " + ime + 
-				"\nPrezime: " + prezime +
-				"\nJMBG: " + JMBG +
-				"\nAdresa: " + adresa +
-				"\nPol: " + pol +
-				"\nBroj telefona: " + brojTelefona +
-				"\nPlata: " + plata +
-				"\nBroj clanske karte: " + brojClanskeKarte +
-				"\nAutomobil: " + automobil +
-				"\nObrisan: " + obrisan;
+		return "Vozac [plata=" + plata + ", brojClanskeKarte=" + brojClanskeKarte + ", automobil=" + automobil
+				+ ", RedniBrojKorisnika=" + redniBrojKorisnika + ", korisnickoIme=" + korisnickoIme + ", lozinka=" + lozinka
+				+ ", ime=" + ime + ", prezime=" + prezime + ", JMBG=" + JMBG + ", adresa=" + adresa + ", pol=" + pol
+				+ ", brojTelefona=" + brojTelefona + ", obrisan=" + obrisan + "]";
 	}
 
 }

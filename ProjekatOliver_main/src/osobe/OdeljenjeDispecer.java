@@ -2,7 +2,7 @@ package osobe;
 
 public enum OdeljenjeDispecer {
 	
-	odeljenjeZaPrijemVoznji,
-	odeljenjeZaPrijemReklamacije
+	odeljenjeZaPrijemVoznji,       //0
+	odeljenjeZaPrijemReklamacije   //1
 
 }

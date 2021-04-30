@@ -2,7 +2,7 @@ package osobe;
 
 public abstract class Korisnik {
 	
-	protected int idKorisnika;
+	protected String redniBrojKorisnika;
 	protected String korisnickoIme;
 	protected String lozinka;
 	protected String ime;
@@ -13,10 +13,10 @@ public abstract class Korisnik {
 	protected String brojTelefona;
 	protected boolean obrisan;
 	
-	public Korisnik(int idKorisnika, String korisnickoIme, String lozinka, String ime, String prezime, String JMBG,
+	public Korisnik(String redniBrojKorisnika, String korisnickoIme, String lozinka, String ime, String prezime, String JMBG,
 			String adresa, Pol pol, String brojTelefona, boolean obrisan) {
 		super();
-		this.idKorisnika = idKorisnika;
+		this.redniBrojKorisnika = redniBrojKorisnika;
 		this.korisnickoIme = korisnickoIme;
 		this.lozinka = lozinka;
 		this.ime = ime;
@@ -30,7 +30,7 @@ public abstract class Korisnik {
 	
 	public Korisnik() {
 		super();
-		this.idKorisnika = 0;
+		this.redniBrojKorisnika = "";
 		this.korisnickoIme = "";
 		this.lozinka = "";
 		this.ime = "";
@@ -42,12 +42,12 @@ public abstract class Korisnik {
 		this.obrisan = false;
 	}
 
-	public int getIdKorisnika() {
-		return idKorisnika;
+	public String getRedniBrojKorisnika() {
+		return redniBrojKorisnika;
 	}
 	
-	public void setIdKorisnika(int idKorisnika) {
-		this.idKorisnika = idKorisnika;
+	public void setIdKorisnika(String redniBrojKorisnika) {
+		this.redniBrojKorisnika = redniBrojKorisnika;
 	}
 	
 	public String getKorisnickoIme() {
@@ -124,17 +124,9 @@ public abstract class Korisnik {
 
 	@Override
 	public String toString() {
-		return "Korisnik \nID korisnika: " + idKorisnika +
-				"\nKorisnicko ime " + korisnickoIme +
-				"\nLozinka" + lozinka +
-				"\nIme " + ime + 
-				"\nPrezime: " + prezime +
-				"\nJMBG: " + JMBG +
-				"\nAdresa: " + adresa +
-				"\nPol: " + pol +
-				"\nBroj telefona: " + brojTelefona +
-				"\nObrisan: " + obrisan;
-		
+		return "Korisnik [RedniBrojKorisnika=" + redniBrojKorisnika + ", korisnickoIme=" + korisnickoIme + ", lozinka=" + lozinka
+				+ ", ime=" + ime + ", prezime=" + prezime + ", JMBG=" + JMBG + ", adresa=" + adresa + ", pol=" + pol
+				+ ", brojTelefona=" + brojTelefona + ", obrisan=" + obrisan + "]";
 	}
 
 }
