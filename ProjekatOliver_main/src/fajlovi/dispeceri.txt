@@ -1,0 +1,11 @@
+002|TestDispecer|testDispecer|testDispecer|testDispecer|testDispecer|testDispecer|1|0638293614|false|50000.5|1|1
+002|TestDispecer|testDispecer|testDispecer|testDispecer|testDispecer|testDispecer|1|0638293614|false|50000.5|1|1
+002|TestDispecer|testDispecer|testDispecer|testDispecer|testDispecer|testDispecer|1|0638293614|false|50000.5|1|1
+003|Username|Password|Ime|Prezime|JMBG|Adresa|0|0639847223|false|70000.5|2|0
+002|TestDispecer|testDispecer|testDispecer|testDispecer|testDispecer|testDispecer|1|0638293614|false|50000.5|1|1
+003|Username|Password|Ime|Prezime|JMBG|Adresa|0|0639847223|false|70000.5|2|0
+002|TestDispecer|testDispecer|testDispecer|testDispecer|testDispecer|testDispecer|1|0638293614|false|50000.5|1|1
+003|Username|Password|Ime|Prezime|JMBG|Adresa|0|0639847223|false|70000.5|2|0
+002|TestDispecer|testDispecer|testDispecer|testDispecer|testDispecer|testDispecer|1|0638293614|false|50000.5|1|1
+003|Username|Password|Ime|Prezime|JMBG|Adresa|0|0639847223|false|70000.5|2|0
+002|TestDispecer|testDispecer|testDispecer|testDispecer|testDispecer|testDispecer|1|0638293614|false|50000.5|1|1
