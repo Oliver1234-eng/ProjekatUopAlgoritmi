@@ -9,4 +9,5 @@
 001|30.04.2021.|polazak|destinacija|null|null|40.0|25min|0|false
 002|01.05.2021.|Adresa polaska|Adresa destinacije|null|null|25.0|10min|0|false
 001|30.04.2021.|polazak|destinacija|null|null|40.0|25min|0|false
+001|30.04.2021.|polazak|destinacija|null|null|40.0|25min|0|false
 001|30.04.2021.|polazak|destinacija|Musterija [RedniBrojKorisnika=001, korisnickoIme=TestMusterija, lozinka=testMusterija, ime=testMusterija, prezime=testMusterija, JMBG=testMusterija, adresa=testMusterija, pol=zenski, brojTelefona=0639817921, obrisan=false]|Vozac [plata=60000.6, brojClanskeKarte=10, automobil=Automobil [idAutomobila=001, model=A8, proizvodjac=AlfaRomeo, vrstaAutomobila=putnickiAutomobil, godinaProizvodnje=2010, brojRegistarskeOznake=NS-100-DJ, brojTaksiVozila=12, obrisan=false], RedniBrojKorisnika=003, korisnickoIme=TestVozac, lozinka=testVozac, ime=testVozac, prezime=testVozac, JMBG=testVozac, adresa=testVozac, pol=muski, brojTelefona=0638924371, obrisan=false]|40.0|25min|0|false

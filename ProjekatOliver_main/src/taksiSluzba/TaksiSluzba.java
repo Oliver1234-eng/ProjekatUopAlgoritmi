@@ -43,12 +43,20 @@ public class TaksiSluzba {
 		this.dispeceri.add(dispecer);
 	}
 	
+	public void obrisiDispecera(Dispecer dispecer) {
+		this.dispeceri.remove(dispecer);
+	}
+	
 	public ArrayList<Vozac> getVozaci() {
 		return vozaci;
 	}
 	
 	public void dodajVozaca(Vozac vozac) {
 		this.vozaci.add(vozac);
+	}
+	
+	public void obrisiVozaca(Vozac vozac) {
+		this.vozaci.remove(vozac);
 	}
 	
 	public ArrayList<Musterija> getMusterije() {
@@ -59,6 +67,10 @@ public class TaksiSluzba {
 		this.musterije.add(musterija);
 	}
 	
+	public void obrisiMusteriju(Musterija musterija) {
+		this.musterije.remove(musterija);
+	}
+	
 	public ArrayList<Voznja> getVoznje() {
 		return voznje;
 	}
@@ -67,12 +79,20 @@ public class TaksiSluzba {
 		this.voznje.add(voznja);
 	}
 	
+	public void obrisiVoznju(Voznja voznja) {
+		this.voznje.remove(voznja);
+	}
+	
 	public ArrayList<Automobil> getAutomobili() {
 		return automobili;
 	}
 	
 	public void dodajAutomobil(Automobil automobil) {
 		this.automobili.add(automobil);
+	}
+	
+	public void obrisiAutomobil(Automobil automobil) {
+		this.automobili.remove(automobil);
 	}
 	
 	public Dispecer getDispecerPoKorisnickomImenu(String korisnickoIme) {
@@ -128,6 +148,89 @@ public class TaksiSluzba {
 		}
 		
 		return null;
+	}
+	
+	public Dispecer loginDispecer(String korisnickoIme, String lozinka) {
+		for (Dispecer dispecer : dispeceri) {
+			if (dispecer.getKorisnickoIme().equalsIgnoreCase(korisnickoIme) &&
+					dispecer.getLozinka().equalsIgnoreCase(lozinka) && !dispecer.isObrisan()) {
+				
+				return dispecer;
+			}
+		}
+		return null;
+	}
+	
+	public Vozac loginVozac(String korisnickoIme, String lozinka) {
+		for (Vozac vozac : vozaci) {
+			if (vozac.getKorisnickoIme().equalsIgnoreCase(korisnickoIme) &&
+					vozac.getLozinka().equalsIgnoreCase(lozinka) && !vozac.isObrisan()) {
+				
+				return vozac;
+			}
+		}
+		return null;
+	}
+	
+	public Musterija loginMusterija(String korisnickoIme, String lozinka) {
+		for (Musterija musterija : musterije) {
+			if (musterija.getKorisnickoIme().equalsIgnoreCase(korisnickoIme) &&
+					musterija.getLozinka().equalsIgnoreCase(lozinka) && !musterija.isObrisan()) {
+				
+				return musterija;
+			}
+		}
+		return null;
+	}
+	
+	public ArrayList<Dispecer> sviNeobrisaniDispeceri() {
+		ArrayList<Dispecer> neobrisaniDispeceri = new ArrayList<Dispecer>();
+		for (Dispecer dispecer : dispeceri) {
+			if (!dispecer.isObrisan()) {
+				neobrisaniDispeceri.add(dispecer);
+			}
+		}
+		return neobrisaniDispeceri;
+	}
+	
+	public ArrayList<Vozac> sviNeobrisaniVozaci() {
+		ArrayList<Vozac> neobrisaniVozaci = new ArrayList<Vozac>();
+		for (Vozac vozac : vozaci) {
+			if (!vozac.isObrisan()) {
+				neobrisaniVozaci.add(vozac);
+			}
+		}
+		return neobrisaniVozaci;
+	}
+	
+	public ArrayList<Musterija> sveNeobrisaneMusterije() {
+		ArrayList<Musterija> neobrisaneMusterije = new ArrayList<Musterija>();
+		for (Musterija musterija : musterije) {
+			if (!musterija.isObrisan()) {
+				neobrisaneMusterije.add(musterija);
+			}
+		}
+		return neobrisaneMusterije;
+	} 
+	
+	public ArrayList<Automobil> sviNeobrisaniAutomobili() {
+		ArrayList<Automobil> neobrisaniAutomobili = new ArrayList<Automobil>();
+		for (Automobil automobil : automobili) {
+			if (!automobil.isObrisan()) {
+				neobrisaniAutomobili.add(automobil);
+			}
+		}
+		return neobrisaniAutomobili;
+	}
+	
+	public ArrayList<Voznja> sveNeobrisaneVoznje() {
+		ArrayList<Voznja> neobrisaneVoznje = new ArrayList<Voznja>();
+		for (Voznja voznja : voznje) {
+			if (!voznja.isObrisan()) {
+				neobrisaneVoznje.add(voznja);
+			}
+		}
+		return neobrisaneVoznje;
 	}
 	
 	public void ucitajDispecere(String imeFajla) {

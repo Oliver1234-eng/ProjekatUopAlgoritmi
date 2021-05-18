@@ -10,3 +10,4 @@
 002|Username|Password|Ime|Prezime|JMBG|Adresa|1|0639956729|false
 001|TestMusterija|testMusterija|testMusterija|testMusterija|testMusterija|testMusterija|0|0639817921|false
 001|TestMusterija|testMusterija|testMusterija|testMusterija|testMusterija|testMusterija|0|0639817921|false
+001|TestMusterija|testMusterija|testMusterija|testMusterija|testMusterija|testMusterija|0|0639817921|false
