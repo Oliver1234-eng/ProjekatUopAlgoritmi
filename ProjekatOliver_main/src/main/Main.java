@@ -5,6 +5,8 @@ import automobil.Model;
 import automobil.Proizvodjac;
 import automobil.VrstaAutomobila;
 import gui.LoginProzorDispecer;
+import gui.LoginProzorMusterija;
+import gui.LoginProzorVozac;
 import osobe.Dispecer;
 import osobe.Musterija;
 import osobe.OdeljenjeDispecer;
@@ -33,6 +35,12 @@ public class Main {
 		
 		LoginProzorDispecer loginProzorDispecer = new LoginProzorDispecer(taksiSluzba);
 		loginProzorDispecer.setVisible(true);
+		
+		LoginProzorVozac loginProzorVozac = new LoginProzorVozac(taksiSluzba);
+		loginProzorVozac.setVisible(true);
+		
+		LoginProzorMusterija loginProzorMusterija = new LoginProzorMusterija(taksiSluzba);
+		loginProzorMusterija.setVisible(true);
 		
 //		System.out.println("PODACI UCITANI IZ DATOTEKA: ");
 //		System.out.println("----------------------------------------------");
