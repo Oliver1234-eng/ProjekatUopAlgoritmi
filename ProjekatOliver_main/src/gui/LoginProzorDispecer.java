@@ -12,6 +12,8 @@ import javax.swing.JTextField;
 
 import net.miginfocom.swing.MigLayout;
 import osobe.Dispecer;
+import osobe.Musterija;
+import osobe.Vozac;
 import taksiSluzba.TaksiSluzba;
 
 public class LoginProzorDispecer extends JFrame {
@@ -25,9 +27,13 @@ public class LoginProzorDispecer extends JFrame {
 	private JButton btnNazad = new JButton("Nazad");
 	
 	private TaksiSluzba taksiSluzba;
+//	private Musterija imeMusterije;
+//	private Vozac imeVozaca;
 	
 	public LoginProzorDispecer(TaksiSluzba taksiSluzba) {
 		this.taksiSluzba = taksiSluzba;
+//		this.imeMusterije = imeMusterije;
+//		this.imeVozaca = imeVozaca;
 		setTitle("Prijava na sistem");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setLocationRelativeTo(null);
@@ -48,6 +54,9 @@ public class LoginProzorDispecer extends JFrame {
 		add(new JLabel());
 		add(btnPrijaviSe, "split 2");
 		add(btnNazad);
+		
+		txtKorisnickoIme.setText("TestDispecer");
+		pfLozinka.setText("testDispecer123");
 		
 		getRootPane().setDefaultButton(btnPrijaviSe);
 		
@@ -87,5 +96,6 @@ public class LoginProzorDispecer extends JFrame {
 		});	
 		
 	}
+	
 
 }

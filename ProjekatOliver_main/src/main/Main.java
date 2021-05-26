@@ -19,18 +19,18 @@ import voznja.Voznja;
 public class Main {
 	
 	private static String DISPECERI_FAJL = "dispeceri.txt";
+	private static String AUTOMOBILI_FAJL = "automobili.txt";
 	private static String VOZACI_FAJL = "vozaci.txt";
 	private static String MUSTERIJE_FAJL = "musterije.txt";
-	private static String AUTOMOBILI_FAJL = "automobili.txt";
 	private static String VOZNJE_FAJL = "voznje.txt";
 
 	public static void main(String[] args) {
 		TaksiSluzba taksiSluzba = new TaksiSluzba();
 		
 		taksiSluzba.ucitajDispecere(DISPECERI_FAJL);
+		taksiSluzba.ucitajAutomobile(AUTOMOBILI_FAJL);
 		taksiSluzba.ucitajVozace(VOZACI_FAJL);
 		taksiSluzba.ucitajMusterije(MUSTERIJE_FAJL);
-		taksiSluzba.ucitajAutomobile(AUTOMOBILI_FAJL);
 		taksiSluzba.ucitajVoznje(VOZNJE_FAJL);
 		
 		LoginProzorDispecer loginProzorDispecer = new LoginProzorDispecer(taksiSluzba);

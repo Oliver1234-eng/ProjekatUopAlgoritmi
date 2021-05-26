@@ -49,6 +49,9 @@ public class LoginProzorMusterija extends JFrame {
 		add(btnPrijaviSe, "split 2");
 		add(btnNazad);
 		
+		txtKorisnickoIme.setText("TestMusterija");
+		pfLozinka.setText("testMusterija123");
+		
 		getRootPane().setDefaultButton(btnPrijaviSe);
 		
 	}

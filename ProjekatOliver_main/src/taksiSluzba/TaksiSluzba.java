@@ -22,17 +22,18 @@ import voznja.Voznja;
 public class TaksiSluzba {
 	
 	private ArrayList<Dispecer> dispeceri;
+	private ArrayList<Automobil> automobili;
 	private ArrayList<Vozac> vozaci;
 	private ArrayList<Musterija> musterije;
 	private ArrayList<Voznja> voznje;
-	private ArrayList<Automobil> automobili;
+	
 	
 	public TaksiSluzba() {
 		this.dispeceri = new ArrayList<Dispecer>();
+		this.automobili = new ArrayList<Automobil>();
 		this.vozaci = new ArrayList<Vozac>();
 		this.musterije = new ArrayList<Musterija>();
 		this.voznje = new ArrayList<Voznja>();
-		this.automobili = new ArrayList<Automobil>();
 	}
 	
 	public ArrayList<Dispecer> getDispeceri() {
@@ -45,6 +46,18 @@ public class TaksiSluzba {
 	
 	public void obrisiDispecera(Dispecer dispecer) {
 		this.dispeceri.remove(dispecer);
+	}
+	
+	public ArrayList<Automobil> getAutomobili() {
+		return automobili;
+	}
+	
+	public void dodajAutomobil(Automobil automobil) {
+		this.automobili.add(automobil);
+	}
+	
+	public void obrisiAutomobil(Automobil automobil) {
+		this.automobili.remove(automobil);
 	}
 	
 	public ArrayList<Vozac> getVozaci() {
@@ -83,23 +96,22 @@ public class TaksiSluzba {
 		this.voznje.remove(voznja);
 	}
 	
-	public ArrayList<Automobil> getAutomobili() {
-		return automobili;
-	}
-	
-	public void dodajAutomobil(Automobil automobil) {
-		this.automobili.add(automobil);
-	}
-	
-	public void obrisiAutomobil(Automobil automobil) {
-		this.automobili.remove(automobil);
-	}
-	
 	public Dispecer getDispecerPoKorisnickomImenu(String korisnickoIme) {
 		ArrayList<Dispecer> dispeceri = getDispeceri();
 		for (Dispecer dispecer : dispeceri) {
 			if (korisnickoIme.equals(dispecer.getKorisnickoIme())) {
 				return dispecer;
+			}
+		}
+		
+		return null;
+	}
+	
+	public Automobil getAutomobilPoID(String id) {
+		ArrayList<Automobil> automobili = getAutomobili();
+		for (Automobil automobil : automobili) {
+			if (id.equals(automobil.getIdAutomobila())) {
+				return automobil;
 			}
 		}
 		
@@ -122,17 +134,6 @@ public class TaksiSluzba {
 		for (Musterija musterija : musterije) {
 			if (korisnickoIme.equals(musterija.getKorisnickoIme())) {
 				return musterija;
-			}
-		}
-		
-		return null;
-	}
-	
-	public Automobil getAutomobilPoID(String id) {
-		ArrayList<Automobil> automobili = getAutomobili();
-		for (Automobil automobil : automobili) {
-			if (id.equals(automobil.getIdAutomobila())) {
-				return automobil;
 			}
 		}
 		
@@ -193,6 +194,16 @@ public class TaksiSluzba {
 		return neobrisaniDispeceri;
 	}
 	
+	public ArrayList<Automobil> sviNeobrisaniAutomobili() {
+		ArrayList<Automobil> neobrisaniAutomobili = new ArrayList<Automobil>();
+		for (Automobil automobil : automobili) {
+			if (!automobil.isObrisan()) {
+				neobrisaniAutomobili.add(automobil);
+			}
+		}
+		return neobrisaniAutomobili;
+	}
+	
 	public ArrayList<Vozac> sviNeobrisaniVozaci() {
 		ArrayList<Vozac> neobrisaniVozaci = new ArrayList<Vozac>();
 		for (Vozac vozac : vozaci) {
@@ -212,16 +223,6 @@ public class TaksiSluzba {
 		}
 		return neobrisaneMusterije;
 	} 
-	
-	public ArrayList<Automobil> sviNeobrisaniAutomobili() {
-		ArrayList<Automobil> neobrisaniAutomobili = new ArrayList<Automobil>();
-		for (Automobil automobil : automobili) {
-			if (!automobil.isObrisan()) {
-				neobrisaniAutomobili.add(automobil);
-			}
-		}
-		return neobrisaniAutomobili;
-	}
 	
 	public ArrayList<Voznja> sveNeobrisaneVoznje() {
 		ArrayList<Voznja> neobrisaneVoznje = new ArrayList<Voznja>();
@@ -260,6 +261,39 @@ public class TaksiSluzba {
 				Dispecer dispecer = new Dispecer(redniBrojKorisnika, korisnickoIme, lozinka, ime, prezime, JMBG, adresa, pol, brojTelefona, obrisan, plata, brojTelefonskeLinije, odeljenjeDispecer);
 				dispeceri.add(dispecer);
 			}	
+			
+			reader.close();
+			
+		} catch (Exception e) {
+			
+			e.printStackTrace();
+		}
+	}
+	
+	public void ucitajAutomobile(String imeFajla) {
+		try {
+			File file = new File("src/fajlovi/" + imeFajla);
+			BufferedReader reader = new BufferedReader(new FileReader(file));
+			String line = null;
+			while ((line = reader.readLine()) != null) {
+				String[] split = line.split("\\|");
+				String idAutomobila = split[0];
+				int modelInt = Integer.parseInt(split[1]);
+				Model model = Model.values()[modelInt];
+				int proizvodjacInt = Integer.parseInt(split[2]);
+				Proizvodjac proizvodjac = Proizvodjac.values()[proizvodjacInt];
+				int vrstaAutomobilaInt = Integer.parseInt(split[3]);
+				VrstaAutomobila vrstaAutomobila = VrstaAutomobila.values()[vrstaAutomobilaInt];
+				String godinaProizvodnjeString = split[4];
+				int godinaProizvodnje = Integer.parseInt(godinaProizvodnjeString);
+				String brojRegistarskeOznake = split[5];
+				String brojTaksiVozilaString = split[6];
+				int brojTaksiVozila = Integer.parseInt(brojTaksiVozilaString);
+				boolean obrisan = Boolean.parseBoolean(split[7]);
+				Automobil automobil = new Automobil(idAutomobila, model, proizvodjac, vrstaAutomobila, godinaProizvodnje, brojRegistarskeOznake, brojTaksiVozila, obrisan);
+				automobili.add(automobil);
+				
+			}
 			
 			reader.close();
 			
@@ -335,39 +369,6 @@ public class TaksiSluzba {
 		}
 	}
 	
-	public void ucitajAutomobile(String imeFajla) {
-		try {
-			File file = new File("src/fajlovi/" + imeFajla);
-			BufferedReader reader = new BufferedReader(new FileReader(file));
-			String line = null;
-			while ((line = reader.readLine()) != null) {
-				String[] split = line.split("\\|");
-				String idAutomobila = split[0];
-				int modelInt = Integer.parseInt(split[1]);
-				Model model = Model.values()[modelInt];
-				int proizvodjacInt = Integer.parseInt(split[2]);
-				Proizvodjac proizvodjac = Proizvodjac.values()[proizvodjacInt];
-				int vrstaAutomobilaInt = Integer.parseInt(split[3]);
-				VrstaAutomobila vrstaAutomobila = VrstaAutomobila.values()[vrstaAutomobilaInt];
-				String godinaProizvodnjeString = split[4];
-				int godinaProizvodnje = Integer.parseInt(godinaProizvodnjeString);
-				String brojRegistarskeOznake = split[5];
-				String brojTaksiVozilaString = split[6];
-				int brojTaksiVozila = Integer.parseInt(brojTaksiVozilaString);
-				boolean obrisan = Boolean.parseBoolean(split[7]);
-				Automobil automobil = new Automobil(idAutomobila, model, proizvodjac, vrstaAutomobila, godinaProizvodnje, brojRegistarskeOznake, brojTaksiVozila, obrisan);
-				automobili.add(automobil);
-				
-			}
-			
-			reader.close();
-			
-		} catch (Exception e) {
-			
-			e.printStackTrace();
-		}
-	}
-	
 	public void ucitajVoznje(String imeFajla) {
 		try {
 			File file = new File("src/fajlovi/" + imeFajla);
@@ -427,6 +428,28 @@ public class TaksiSluzba {
 		}
 	}
 	
+	public void snimiAutomobil(String imeFajla) {
+		try {
+			File file = new File("src/fajlovi/" + imeFajla);
+			BufferedWriter writer = new BufferedWriter(new FileWriter(file));
+			String content = "";
+			for (Automobil automobil : automobili) {
+				
+				content += automobil.getIdAutomobila() + "|" + automobil.getModel().ordinal() + "|"
+						+ automobil.getVrstaAutomobila().ordinal() + "|" + automobil.getProizvodjac().ordinal() + "|"
+						+ automobil.getGodinaProizvodnje() + "|" + automobil.getBrojRegistarskeOznake() + "|" 
+						+ automobil.getBrojTaksiVozila() + "|"+ automobil.isObrisan() + "\n";
+			}
+			
+			writer.write(content);
+			writer.close();
+		} catch (Exception e) {
+			
+			e.printStackTrace();
+			
+		}
+	}
+	
 	public void snimiVozaca(String imeFajla) {
 		try {
 			File file = new File("src/fajlovi/" + imeFajla);
@@ -439,7 +462,7 @@ public class TaksiSluzba {
 						+ vozac.getPrezime() + "|" + vozac.getJMBG() + "|" + vozac.getAdresa() + "|"
 						+ vozac.getPol().ordinal() + "|" + vozac.getBrojTelefona() + "|" + vozac.isObrisan() + "|"
 						+ vozac.getPlata() + "|" + vozac.getBrojClanskeKarte() + "|"
-						+ vozac.getAutomobil() + "\n";
+						+ vozac.getAutomobil().getIdAutomobila() + "\n";
 			}
 			
 			writer.write(content);
@@ -474,28 +497,6 @@ public class TaksiSluzba {
 		}
 	}
 	
-	public void snimiAutomobil(String imeFajla) {
-		try {
-			File file = new File("src/fajlovi/" + imeFajla);
-			BufferedWriter writer = new BufferedWriter(new FileWriter(file));
-			String content = "";
-			for (Automobil automobil : automobili) {
-				
-				content += automobil.getIdAutomobila() + "|" + automobil.getModel().ordinal() + "|"
-						+ automobil.getVrstaAutomobila().ordinal() + "|" + automobil.getProizvodjac().ordinal() + "|"
-						+ automobil.getGodinaProizvodnje() + "|" + automobil.getBrojRegistarskeOznake() + "|" 
-						+ automobil.getBrojTaksiVozila() + "|"+ automobil.isObrisan() + "\n";
-			}
-			
-			writer.write(content);
-			writer.close();
-		} catch (Exception e) {
-			
-			e.printStackTrace();
-			
-		}
-	}
-	
 	public void snimiVoznju(String imeFajla) {
 		try {
 			File file = new File("src/fajlovi/" + imeFajla);
@@ -505,7 +506,7 @@ public class TaksiSluzba {
 				
 				content += voznja.getIdVoznje() + "|" + voznja.getDatumIVremePorudzbine() + "|"
 						+ voznja.getAdresaPolaska() + "|" + voznja.getAdresaDestinacije() + "|"
-						+ voznja.getImeMusterije() + "|" + voznja.getImeVozaca() + "|" 
+						+ voznja.getImeMusterije().getKorisnickoIme() + "|" + voznja.getImeVozaca().getKorisnickoIme() + "|" 
 						+ voznja.getBrojPredjenihKilometara() + "|" + voznja.getTrajanjeVoznje() + "|"
 						+ voznja.getStatusVoznje().ordinal() + "|"+ voznja.isObrisan() + "\n";
 			}
@@ -518,7 +519,6 @@ public class TaksiSluzba {
 			
 		}
 	}
-
+	
 }
-
 

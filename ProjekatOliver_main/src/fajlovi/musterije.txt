@@ -1,13 +1,3 @@
-001|TestMusterija|testMusterija|testMusterija|testMusterija|testMusterija|testMusterija|0|0639817921|false
-001|TestMusterija|testMusterija|testMusterija|testMusterija|testMusterija|testMusterija|0|0639817921|false
-001|TestMusterija|testMusterija|testMusterija|testMusterija|testMusterija|testMusterija|0|0639817921|false
-002|Username|Password|Ime|Prezime|JMBG|Adresa|1|0639956729|false
-001|TestMusterija|testMusterija|testMusterija|testMusterija|testMusterija|testMusterija|0|0639817921|false
-002|Username|Password|Ime|Prezime|JMBG|Adresa|1|0639956729|false
-001|TestMusterija|testMusterija|testMusterija|testMusterija|testMusterija|testMusterija|0|0639817921|false
-002|Username|Password|Ime|Prezime|JMBG|Adresa|1|0639956729|false
-001|TestMusterija|testMusterija|testMusterija|testMusterija|testMusterija|testMusterija|0|0639817921|false
-002|Username|Password|Ime|Prezime|JMBG|Adresa|1|0639956729|false
-001|TestMusterija|testMusterija|testMusterija|testMusterija|testMusterija|testMusterija|0|0639817921|false
-001|TestMusterija|testMusterija|testMusterija|testMusterija|testMusterija|testMusterija|0|0639817921|false
-001|TestMusterija|testMusterija|testMusterija|testMusterija|testMusterija|testMusterija|0|0639817921|false
+001|TestMusterija|testMusterija123|ImeMusterija|PrezimeMusterija|JMBGMusterija|AdresaMusterija|0|0639817921|false
+002|TestMusterija2|testMusterija1234|ImeMusterija2|PrezimeMusterija2|JMBGMusterija2|AdresaMusterija2|0|0639817921|false
+003|TestMusterija3|testMusterija12345|ImeMusterija3|PrezimeMusterija3|JMBGMusterija3|AdresaMusterija3|0|0639817921|false

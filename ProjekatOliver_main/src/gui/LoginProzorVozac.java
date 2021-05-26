@@ -49,6 +49,9 @@ public class LoginProzorVozac extends JFrame {
 		add(btnPrijaviSe, "split 2");
 		add(btnNazad);
 		
+		txtKorisnickoIme.setText("TestVozac");
+		pfLozinka.setText("testVozac123");
+		
 		getRootPane().setDefaultButton(btnPrijaviSe);
 		
 	}
