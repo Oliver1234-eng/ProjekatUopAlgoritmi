@@ -1,16 +1,21 @@
 package gui.formeZaPrikaz;
 
 import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JToolBar;
 import javax.swing.ListSelectionModel;
 import javax.swing.table.DefaultTableModel;
 
+import gui.FormeZaDodavanjeIIzmenu.DispeceriDispecerForma;
+import main.Main;
 import osobe.Dispecer;
 import osobe.Vozac;
 import taksiSluzba.TaksiSluzba;
@@ -86,6 +91,56 @@ public class DispeceriProzorDispecer extends JFrame {
 	}
 	
 	private void initActions() {
+
+		btnObrisi.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				int red = dispeceriTabela.getSelectedRow();
+				if (red == -1) {
+					JOptionPane.showMessageDialog(null, "Morate odabrati red u tabeli.", "Greska", JOptionPane.WARNING_MESSAGE);
+				} else {
+					String korisnickoIme = tableModel.getValueAt(red, 1).toString();
+					Dispecer dispecer = taksiSluzba.getDispecerPoKorisnickomImenu(korisnickoIme);
+					
+					int izbor = JOptionPane.showConfirmDialog(null, "Da li ste sigurni da zelite da obrisete dispecera?", 
+							korisnickoIme + " - Porvrda brisanja", JOptionPane.YES_NO_OPTION);
+					
+					if (izbor == JOptionPane.YES_OPTION) {
+						dispecer.setObrisan(true);
+						tableModel.removeRow(red);
+						taksiSluzba.snimiDispecera(Main.DISPECERI_FAJL);
+					}
+					
+				}
+			}
+		});
+		
+		btnDodaj.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				DispeceriDispecerForma dispeceriDispecerForma = new DispeceriDispecerForma(taksiSluzba, null);
+				dispeceriDispecerForma.setVisible(true);
+			}
+		});
+		
+		btnIzmeni.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				int red = dispeceriTabela.getSelectedRow();
+				if (red == -1) {
+					JOptionPane.showMessageDialog(null, "Morate odabrati red u tabeli.", "Greska", JOptionPane.WARNING_MESSAGE);
+				} else {
+					String korisnickoIme = tableModel.getValueAt(red, 1).toString();
+					Dispecer dispecer = taksiSluzba.getDispecerPoKorisnickomImenu(korisnickoIme);
+					if (dispecer == null) {
+						JOptionPane.showMessageDialog(null, "Greska prilikom pronalazenja dispecera sa tim korisnickim imenom", "Greska", JOptionPane.WARNING_MESSAGE);
+					} else {
+						DispeceriDispecerForma dispeceriDispecerForma = new DispeceriDispecerForma(taksiSluzba, dispecer);
+						dispeceriDispecerForma.setVisible(true);	
+					}
+				}
+			}
+		});
 		
 		
 	}

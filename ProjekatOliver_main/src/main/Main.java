@@ -18,11 +18,11 @@ import voznja.Voznja;
 
 public class Main {
 	
-	private static String DISPECERI_FAJL = "dispeceri.txt";
-	private static String AUTOMOBILI_FAJL = "automobili.txt";
-	private static String VOZACI_FAJL = "vozaci.txt";
-	private static String MUSTERIJE_FAJL = "musterije.txt";
-	private static String VOZNJE_FAJL = "voznje.txt";
+	public static String DISPECERI_FAJL = "dispeceri.txt";
+	public static String AUTOMOBILI_FAJL = "automobili.txt";
+	public static String VOZACI_FAJL = "vozaci.txt";
+	public static String MUSTERIJE_FAJL = "musterije.txt";
+	public static String VOZNJE_FAJL = "voznje.txt";
 
 	public static void main(String[] args) {
 		TaksiSluzba taksiSluzba = new TaksiSluzba();
