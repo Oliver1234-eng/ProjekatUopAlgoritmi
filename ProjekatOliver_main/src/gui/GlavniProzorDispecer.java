@@ -19,14 +19,12 @@ import taksiSluzba.TaksiSluzba;
 public class GlavniProzorDispecer extends JFrame {
 	
 	private JMenuBar glavniMeniDispecer = new JMenuBar();
-	private JMenu vozaciMeni = new JMenu("vozaci");
-	private JMenuItem vozaci = new JMenuItem("Vozaci");
-	private JMenu automobiliMeni = new JMenu("automobili");
-	private JMenuItem automobili = new JMenuItem("Automobili");
-	private JMenu voznjeMeni = new JMenu("voznje");
-	private JMenuItem voznje = new JMenuItem("Voznje");
-	private JMenu dispeceriMeni = new JMenu("dispeceri");
-	private JMenuItem dispeceri = new JMenuItem("Dispeceri");
+	private JMenu vozaciMeni = new JMenu("CRUD vozaci");
+	private JMenuItem vozaci = new JMenuItem("CRUD Vozaci");
+	private JMenu voznjeMeni = new JMenu("CRUD voznje");
+	private JMenuItem voznje = new JMenuItem("CRUD Voznje");
+	private JMenu dispeceriMeni = new JMenu("CRUD dispeceri");
+	private JMenuItem dispeceri = new JMenuItem("CRUD Dispeceri");
 	
 	private TaksiSluzba taksiSluzba;
 	private Dispecer prijavljeni;
@@ -51,8 +49,6 @@ public class GlavniProzorDispecer extends JFrame {
 		setJMenuBar(glavniMeniDispecer);
 		glavniMeniDispecer.add(vozaciMeni);
 		vozaciMeni.add(vozaci);
-		glavniMeniDispecer.add(automobiliMeni);
-		automobiliMeni.add(automobili);
 		glavniMeniDispecer.add(voznjeMeni);
 		voznjeMeni.add(voznje);
 		glavniMeniDispecer.add(dispeceriMeni);
