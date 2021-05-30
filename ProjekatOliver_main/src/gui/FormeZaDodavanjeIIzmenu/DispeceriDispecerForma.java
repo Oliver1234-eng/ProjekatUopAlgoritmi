@@ -165,13 +165,16 @@ public class DispeceriDispecerForma extends JFrame {
 	private void popuniPolja() {
 		
 		txtRedniBrojKorisnika.setText(dispecer.getRedniBrojKorisnika());
+		txtRedniBrojKorisnika.setEditable(false);
 		txtKorisnickoIme.setText(dispecer.getKorisnickoIme());
+		txtKorisnickoIme.setEditable(false);
 		pfLozinka.setText(dispecer.getLozinka());
 		txtIme.setText(dispecer.getIme());
 		txtPrezime.setText(dispecer.getPrezime());
 		txtJMBG.setText(dispecer.getJMBG());
 		txtAdresa.setText(dispecer.getAdresa());
 		cbPol.setSelectedItem(dispecer.getPol());
+		cbPol.setEnabled(false);
 		txtBrojTelefona.setText(dispecer.getBrojTelefona());
 		txtPlata.setText(String.valueOf(dispecer.getPlata()));
 		txtBrojTelefonskeLinije.setText(String.valueOf(dispecer.getBrojTelefonskeLinije()));

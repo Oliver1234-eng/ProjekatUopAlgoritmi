@@ -167,13 +167,16 @@ public class VozaciDispecerForma extends JFrame {
 	private void popuniPolja() {
 		
 		txtRedniBrojKorisnika.setText(vozac.getRedniBrojKorisnika());
+		txtRedniBrojKorisnika.setEditable(false);
 		txtKorisnickoIme.setText(vozac.getKorisnickoIme());
+		txtKorisnickoIme.setEditable(false);
 		pfLozinka.setText(vozac.getLozinka());
 		txtIme.setText(vozac.getIme());
 		txtPrezime.setText(vozac.getPrezime());
 		txtJMBG.setText(vozac.getJMBG());
 		txtAdresa.setText(vozac.getAdresa());
 		cbPol.setSelectedItem(vozac.getPol());
+		cbPol.setEnabled(false);
 		txtBrojTelefona.setText(vozac.getBrojTelefona());
 		txtPlata.setText(String.valueOf(vozac.getPlata()));
 		txtBrojClanskeKarte.setText(String.valueOf(vozac.getBrojClanskeKarte()));

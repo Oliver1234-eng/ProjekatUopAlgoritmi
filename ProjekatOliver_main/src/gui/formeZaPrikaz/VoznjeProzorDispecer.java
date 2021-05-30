@@ -1,16 +1,22 @@
 package gui.formeZaPrikaz;
 
 import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JToolBar;
 import javax.swing.ListSelectionModel;
 import javax.swing.table.DefaultTableModel;
 
+import gui.FormeZaDodavanjeIIzmenu.VozaciDispecerForma;
+import gui.FormeZaDodavanjeIIzmenu.VoznjeDispecerForma;
+import main.Main;
 import osobe.Musterija;
 import osobe.Vozac;
 import taksiSluzba.TaksiSluzba;
@@ -96,6 +102,55 @@ public class VoznjeProzorDispecer extends JFrame {
 	}
 	
 	private void initActions() {
+		
+		btnObrisi.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				int red = voznjeTabela.getSelectedRow();
+				if (red == -1) {
+					JOptionPane.showMessageDialog(null, "Morate odabrati red u tabeli.", "Greska", JOptionPane.WARNING_MESSAGE);
+				} else {
+					String idVoznje = tableModel.getValueAt(red, 0).toString();
+					Voznja voznja = taksiSluzba.getVoznjePoID(idVoznje);
+					
+					int izbor = JOptionPane.showConfirmDialog(null, "Da li ste sigurni da zelite da obrisete ovu voznju?", 
+							idVoznje + " - Porvrda brisanja", JOptionPane.YES_NO_OPTION);
+					
+					if (izbor == JOptionPane.YES_OPTION) {
+						voznja.setObrisan(true);
+						tableModel.removeRow(red);
+						taksiSluzba.snimiVoznju(Main.VOZNJE_FAJL);
+					}
+				}
+			}
+		});
+		
+		btnDodaj.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				VoznjeDispecerForma voznjeDispecerForma = new VoznjeDispecerForma(taksiSluzba, null);
+				voznjeDispecerForma.setVisible(true);
+			}
+		});
+		
+		btnIzmeni.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				int red = voznjeTabela.getSelectedRow();
+				if (red == -1) {
+					JOptionPane.showMessageDialog(null, "Morate odabrati red u tabeli.", "Greska", JOptionPane.WARNING_MESSAGE);
+				} else {
+					String idVoznje = tableModel.getValueAt(red, 0).toString();
+					Voznja voznja = taksiSluzba.getVoznjePoID(idVoznje);
+					if (voznja == null) {
+						JOptionPane.showMessageDialog(null, "Greska prilikom pronalazenja voznje sa tim ID-om", "Greska", JOptionPane.WARNING_MESSAGE);
+					} else {
+						VoznjeDispecerForma voznjeDispecerForma = new VoznjeDispecerForma(taksiSluzba, voznja);
+						voznjeDispecerForma.setVisible(true);	
+					}
+				}
+			}
+		});
 		
 		
 	}
