@@ -12,12 +12,9 @@ import taksiSluzba.TaksiSluzba;
 public class GlavniProzorMusterija extends JFrame {
 	
 	private JMenuBar glavniMeniMusterija = new JMenuBar();
-	private JMenu proba = new JMenu("proba");
-	private JMenuItem Proba = new JMenuItem("Proba");
-	private JMenu test = new JMenu("test");
-	private JMenuItem Test = new JMenuItem("Test");
-//	private JMenu voznjeMeni = new JMenu("voznje");
-//	private JMenuItem voznje = new JMenuItem("Voznje");
+	private JMenu narucivanjeVoznje = new JMenu("Naruci voznju");
+	private JMenuItem naruciVoznju = new JMenuItem("Narucivanje voznje");
+
 	
 	private TaksiSluzba taksiSluzba;
 	private Musterija prijavljeni;
@@ -36,12 +33,9 @@ public class GlavniProzorMusterija extends JFrame {
 	
 	public void initMenuDispecer() {
 		setJMenuBar(glavniMeniMusterija);
-		glavniMeniMusterija.add(proba);
-		proba.add(Proba);
-		glavniMeniMusterija.add(test);
-		test.add(Test);
-//		glavniMeniDispecer.add(voznjeMeni);
-//		voznjeMeni.add(voznje);
+		glavniMeniMusterija.add(narucivanjeVoznje);
+		narucivanjeVoznje.add(naruciVoznju);
+
 	}
 	
 	public void initActions() {

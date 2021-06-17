@@ -19,26 +19,26 @@ import taksiSluzba.TaksiSluzba;
 public class GlavniProzorDispecer extends JFrame {
 	
 	private JMenuBar glavniMeniDispecer = new JMenuBar();
-	private JMenu vozaciMeni = new JMenu("CRUD vozaci");
-	private JMenuItem vozaci = new JMenuItem("CRUD Vozaci");
-	private JMenu voznjeMeni = new JMenu("CRUD voznje");
-	private JMenuItem voznje = new JMenuItem("CRUD Voznje");
-	private JMenu dispeceriMeni = new JMenu("CRUD dispeceri");
-	private JMenuItem dispeceri = new JMenuItem("CRUD Dispeceri");
+	private JMenu CRUDvozaciMeni = new JMenu("CRUD vozaci");
+	private JMenuItem vozaci = new JMenuItem("Vozaci");
+	private JMenu CRUDvoznjeMeni = new JMenu("CRUD voznje");
+	private JMenuItem voznje = new JMenuItem("Voznje");
+	private JMenu CRUDdispeceriMeni = new JMenu("CRUD dispeceri");
+	private JMenuItem dispeceri = new JMenuItem("Dispeceri");
+	private JMenu prikazSvihVoznji = new JMenu("Prikaz svih voznji");
+	private JMenuItem prikazVoznji = new JMenuItem("Prikazi sve voznje");
+	private JMenu dodeljivanjeVoznjeVozacu = new JMenu("Dodeljivanje voznje vozacu");
+	private JMenuItem dodelaVoznje = new JMenuItem("Dodeli voznju vozacu");
 	
 	private TaksiSluzba taksiSluzba;
 	private Dispecer prijavljeni;
-//	private Musterija imeMusterije;
-//	private Vozac imeVozaca;
 	
 	public GlavniProzorDispecer(TaksiSluzba taksiSluzba, Dispecer prijavljeni) {
 		this.taksiSluzba = taksiSluzba;
 		this.prijavljeni = prijavljeni;
-//		this.imeMusterije = imeMusterije;
-//		this.imeVozaca = imeVozaca;
 		setTitle("Dispecer: " + prijavljeni.getKorisnickoIme());
 		setSize(500, 500);
-		setResizable(false);
+		setResizable(true);
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setLocationRelativeTo(null);
 		initMenuDispecer();
@@ -47,12 +47,16 @@ public class GlavniProzorDispecer extends JFrame {
 	
 	public void initMenuDispecer() {
 		setJMenuBar(glavniMeniDispecer);
-		glavniMeniDispecer.add(vozaciMeni);
-		vozaciMeni.add(vozaci);
-		glavniMeniDispecer.add(voznjeMeni);
-		voznjeMeni.add(voznje);
-		glavniMeniDispecer.add(dispeceriMeni);
-		dispeceriMeni.add(dispeceri);
+		glavniMeniDispecer.add(CRUDvozaciMeni);
+		CRUDvozaciMeni.add(vozaci);
+		glavniMeniDispecer.add(CRUDvoznjeMeni);
+		CRUDvoznjeMeni.add(voznje);
+		glavniMeniDispecer.add(CRUDdispeceriMeni);
+		CRUDdispeceriMeni.add(dispeceri);
+		glavniMeniDispecer.add(prikazSvihVoznji);
+		prikazSvihVoznji.add(prikazVoznji);
+		glavniMeniDispecer.add(dodeljivanjeVoznjeVozacu);
+		dodeljivanjeVoznjeVozacu.add(dodelaVoznje);
 	}
 	
 	public void initActions() {
