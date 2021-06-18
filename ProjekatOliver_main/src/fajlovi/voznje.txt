@@ -2,3 +2,4 @@
 002|01.05.2021.|Adresapolazak2|Adresadestinacija2|TestMusterija3|TestVozac3|25.0|20min|0|false
 003|02.05.2021.|Adresapolazak3|Adresadestinacija3|TestMusterija3|TestVozac3|10.0|5min|0|false
 004|30.05.2021.|TestPolazakk|TestDolazak|TestMusterija|TestVozac|30.0|20min|0|true
+975888|18.06.2021.|Adresa1|Adresa2|null|null|0.0|0|0|false

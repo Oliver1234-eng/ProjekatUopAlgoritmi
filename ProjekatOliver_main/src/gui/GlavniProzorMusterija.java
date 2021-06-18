@@ -1,10 +1,15 @@
 package gui;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
+import gui.formeZaPrikaz.NarucivanjeVoznjeProzorMusterija;
+import gui.formeZaPrikaz.VozaciProzorDispecer;
 import osobe.Dispecer;
 import osobe.Musterija;
 import taksiSluzba.TaksiSluzba;
@@ -39,6 +44,15 @@ public class GlavniProzorMusterija extends JFrame {
 	}
 	
 	public void initActions() {
+		
+		naruciVoznju.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				NarucivanjeVoznjeProzorMusterija narucivanjeVoznjeProzorMusterija = new NarucivanjeVoznjeProzorMusterija(taksiSluzba);
+				narucivanjeVoznjeProzorMusterija.setVisible(true);
+			}
+		});
 		
 	}
 
