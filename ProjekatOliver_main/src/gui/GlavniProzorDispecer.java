@@ -9,6 +9,7 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
 import gui.formeZaPrikaz.DispeceriProzorDispecer;
+import gui.formeZaPrikaz.DodeljivanjeVoznjeVozacuUlogaDispecer;
 import gui.formeZaPrikaz.PrikazSvihVoznjiProzorDispecer;
 import gui.formeZaPrikaz.VozaciProzorDispecer;
 import gui.formeZaPrikaz.VoznjeProzorDispecer;
@@ -98,6 +99,14 @@ public class GlavniProzorDispecer extends JFrame {
 			}
 		});
 		
+		dodelaVoznje.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				DodeljivanjeVoznjeVozacuUlogaDispecer dodeljivanjeVoznjeVozacuUlogaDispecer = new DodeljivanjeVoznjeVozacuUlogaDispecer(taksiSluzba);
+				dodeljivanjeVoznjeVozacuUlogaDispecer.setVisible(true);
+			}
+		});
 	}
 
 }
