@@ -1,6 +1,6 @@
-001|30.04.2021.|Adresapolazak|Adresadestinacija|TestMusterija3|TestVozac3|40.0|25min|0|false
-002|01.05.2021.|Adresapolazak2|Adresadestinacija2|TestMusterija3|TestVozac3|25.0|20min|0|false
-003|02.05.2021.|Adresapolazak3|Adresadestinacija3|TestMusterija3|TestVozac3|10.0|5min|0|false
-004|30.05.2021.|TestPolazakk|TestDolazak|TestMusterija|TestVozac|30.0|20min|0|true
-681956|18.06.2021.|Adresa1|Adresa2|null|TestVozac|0.0|0|2|false
-555700|24.06.2021.|Mol|1|null|null|0.0|0|0|false
+466914|24.06.2021.|TestA1|TestA2|null|null|20.0|10min|4|false
+392712|24.06.2021.|Adresa1|Adresa2|null|null|30.0|10min|4|false
+852565|24.06.2021.|AD1|AD2|TestMusterija|null|0.0|0|5|false
+1025730|24.06.2021.|ADRESA1|ADRESA2|TestMusterija|null|30.0|15min|4|false
+500789|24.06.2021.|ADRESAPOLASKA|ADRESADESTINACIJE|TestMusterija|null|50.0|20min|4|false
+763263|24.06.2021.|Mol|NoviSad|TestMusterija|TestVozac|30.0|5min|4|false

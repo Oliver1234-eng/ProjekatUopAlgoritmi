@@ -1,3 +1,4 @@
 001|TestMusterija|testMusterija123|ImeMusterija|PrezimeMusterija|JMBGMusterija|AdresaMusterija|0|0639817921|false
-002|TestMusterija2|testMusterija1234|ImeMusterija2|PrezimeMusterija2|JMBGMusterija2|AdresaMusterija2|0|0639817921|false
-003|TestMusterija3|testMusterija12345|ImeMusterija3|PrezimeMusterija3|JMBGMusterija3|AdresaMusterija3|0|0639817921|false
+002|null|null|null|null|null|null|0|null|false
+003|TestMusterija2|testMusterija1234|ImeMusterija2|PrezimeMusterija2|JMBGMusterija2|AdresaMusterija2|0|0639817921|false
+004|TestMusterija3|testMusterija12345|ImeMusterija3|PrezimeMusterija3|JMBGMusterija3|AdresaMusterija3|0|0639817921|false

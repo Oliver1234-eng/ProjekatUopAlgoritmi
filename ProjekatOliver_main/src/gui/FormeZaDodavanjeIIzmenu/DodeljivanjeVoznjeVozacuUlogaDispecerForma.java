@@ -20,6 +20,8 @@ import voznja.Voznja;
 
 public class DodeljivanjeVoznjeVozacuUlogaDispecerForma extends JFrame {
 	
+	private JLabel lblObavestenje = new JLabel("Dobar dan. Molimo dodelite izabranu voznju jednom vozacu.");
+	private JLabel lblUputstvo = new JLabel("Potrebno je odabrati vozaca i promeniti status voznje na DODELJENA: ");
 	private JLabel lblIdVoznje = new JLabel("ID voznje: ");
 	private JTextField txtIdVoznje = new JTextField(20);
 	private JLabel lblDatumIVremePorudzbine = new JLabel("Datum porudzbine: ");
@@ -59,7 +61,7 @@ public class DodeljivanjeVoznjeVozacuUlogaDispecerForma extends JFrame {
 	
 	private void initGUI() {
 		
-		MigLayout layout = new MigLayout("wrap 2", "[][]", "[][][][][][][][][]20[]" );
+		MigLayout layout = new MigLayout("wrap 2", "[][]", "[][][][][][][][][][][]20[]" );
 		setLayout(layout);
 		
 		for (Musterija musterija : taksiSluzba.sveNeobrisaneMusterije()) {
@@ -74,6 +76,8 @@ public class DodeljivanjeVoznjeVozacuUlogaDispecerForma extends JFrame {
 			popuniPolja();
 		}
 		
+		add(lblObavestenje, "span 2");
+		add(lblUputstvo, "span 2");
 		add(lblIdVoznje);
 		add(txtIdVoznje);
 		add(lblDatumIVremePorudzbine);
@@ -102,7 +106,8 @@ public class DodeljivanjeVoznjeVozacuUlogaDispecerForma extends JFrame {
 		txtDatumIVremePorudzbine.setEditable(false);
 		txtAdresaPolaska.setEditable(false);
 		txtAdresaDestinacije.setEditable(false);
-		cbImeMusterije.setEnabled(false);
+//		cbImeMusterije.setEnabled(false);
+//		cbImeVozaca.setEnabled(false);
 		double brojPredjenihKilometara = 0;
 		String brojKilometara = Double.toString(brojPredjenihKilometara);
 		txtBrojPredjenihKilometara.setText(brojKilometara);

@@ -20,6 +20,9 @@ import voznja.Voznja;
 
 public class ZavrsavanjeVoznjeUlogaVozacForma extends JFrame {
 	
+	private JLabel lblObavestenje = new JLabel("Dobar dan. Molimo Vas da zavrsite odabranu voznju.");
+	private JLabel lblUputstvo = new JLabel("Potrebno je promeniti status voznje na ZAVRSENA,");
+	private JLabel lblUputstvo2 = new JLabel("uneti broj predjenih kilometara i trajanje voznje.");
 	private JLabel lblIdVoznje = new JLabel("ID voznje: ");
 	private JTextField txtIdVoznje = new JTextField(20);
 	private JLabel lblDatumIVremePorudzbine = new JLabel("Datum porudzbine: ");
@@ -59,7 +62,7 @@ public class ZavrsavanjeVoznjeUlogaVozacForma extends JFrame {
 	
 	private void initGUI() {
 		
-		MigLayout layout = new MigLayout("wrap 2", "[][]", "[][][][][][][][][]20[]" );
+		MigLayout layout = new MigLayout("wrap 2", "[][]", "[][][][][][][][][][][][]20[]" );
 		setLayout(layout);
 		
 		for (Musterija musterija : taksiSluzba.sveNeobrisaneMusterije()) {
@@ -74,6 +77,9 @@ public class ZavrsavanjeVoznjeUlogaVozacForma extends JFrame {
 			popuniPolja();
 		}
 		
+		add(lblObavestenje, "span 2");
+		add(lblUputstvo, "span 2");
+		add(lblUputstvo2, "span 2");
 		add(lblIdVoznje);
 		add(txtIdVoznje);
 		add(lblDatumIVremePorudzbine);
@@ -102,8 +108,8 @@ public class ZavrsavanjeVoznjeUlogaVozacForma extends JFrame {
 		txtDatumIVremePorudzbine.setEditable(false);
 		txtAdresaPolaska.setEditable(false);
 		txtAdresaDestinacije.setEditable(false);
-		cbImeMusterije.setEnabled(false);
-		cbImeVozaca.setEnabled(false);
+//		cbImeMusterije.setEnabled(false);
+//		cbImeVozaca.setEnabled(false);
 		
 	}
 	

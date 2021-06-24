@@ -20,6 +20,8 @@ import voznja.Voznja;
 
 public class NarucivanjeVoznjeMusterijaForma extends JFrame {
 	
+	private JLabel lblObavestenje = new JLabel("Dobar dan. Molimo Vas narucite voznju.");
+	private JLabel lblUputstvo = new JLabel("Molimo Vas da unesete datum porudzbine, adresu polaska i adresu destinacije: ");
 	private JLabel lblIdVoznje = new JLabel("ID voznje: ");
 	private JTextField txtIdVoznje = new JTextField(20);
 	private JLabel lblDatumIVremePorudzbine = new JLabel("Datum porudzbine: ");
@@ -57,7 +59,7 @@ public class NarucivanjeVoznjeMusterijaForma extends JFrame {
 	
 	private void initGUI() {
 		
-		MigLayout layout = new MigLayout("wrap 2", "[][]", "[][][][][][][][][]20[]" );
+		MigLayout layout = new MigLayout("wrap 2", "[][]", "[][][][][][][][][][][]20[]" );
 		setLayout(layout);
 		
 		for (Musterija musterija : taksiSluzba.sveNeobrisaneMusterije()) {
@@ -72,6 +74,8 @@ public class NarucivanjeVoznjeMusterijaForma extends JFrame {
 //			popuniPolja();
 //		}
 		
+		add(lblObavestenje, "span 2");
+		add(lblUputstvo, "span 2");
 		add(lblIdVoznje);
 		add(txtIdVoznje);
 		add(lblDatumIVremePorudzbine);
@@ -97,6 +101,7 @@ public class NarucivanjeVoznjeMusterijaForma extends JFrame {
 		String voznjaId = Integer.toString(random);
 		txtIdVoznje.setText(voznjaId);
 		txtIdVoznje.setEditable(false);
+		cbImeMusterije.setEnabled(false);
 		cbImeVozaca.setEnabled(false);
 		double brojPredjenihKilometara = 0;
 		String brojKilometara = Double.toString(brojPredjenihKilometara);
