@@ -45,13 +45,13 @@ public class Main {
 		LoginProzorMusterija loginProzorMusterija = new LoginProzorMusterija(taksiSluzba);
 		loginProzorMusterija.setVisible(true);
 	
-		DispeceriProzorDispecer dispeceriProzorDispecer = new DispeceriProzorDispecer(taksiSluzba);
-		dispeceriProzorDispecer.setVisible(false);
-		
-		VozaciProzorDispecer vozaciProzorDispecer = new VozaciProzorDispecer(taksiSluzba);
-		vozaciProzorDispecer.setVisible(false);
-		
-		VoznjeProzorDispecer voznjeProzorDispecer = new VoznjeProzorDispecer(taksiSluzba);
-		voznjeProzorDispecer.setVisible(false);
+//		DispeceriProzorDispecer dispeceriProzorDispecer = new DispeceriProzorDispecer(taksiSluzba);
+//		dispeceriProzorDispecer.setVisible(false);
+//		
+//		VozaciProzorDispecer vozaciProzorDispecer = new VozaciProzorDispecer(taksiSluzba);
+//		vozaciProzorDispecer.setVisible(false);
+//		
+//		VoznjeProzorDispecer voznjeProzorDispecer = new VoznjeProzorDispecer(taksiSluzba);
+//		voznjeProzorDispecer.setVisible(false);
 
 }}

@@ -3,3 +3,4 @@
 003|02.05.2021.|Adresapolazak3|Adresadestinacija3|TestMusterija3|TestVozac3|10.0|5min|0|false
 004|30.05.2021.|TestPolazakk|TestDolazak|TestMusterija|TestVozac|30.0|20min|0|true
 681956|18.06.2021.|Adresa1|Adresa2|null|TestVozac|0.0|0|2|false
+555700|24.06.2021.|Mol|1|null|null|0.0|0|0|false

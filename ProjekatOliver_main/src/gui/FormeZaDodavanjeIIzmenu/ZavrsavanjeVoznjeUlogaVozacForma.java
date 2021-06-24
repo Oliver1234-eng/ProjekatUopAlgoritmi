@@ -18,7 +18,7 @@ import taksiSluzba.TaksiSluzba;
 import voznja.StatusVoznje;
 import voznja.Voznja;
 
-public class NarucivanjeVoznjeMusterijaForma extends JFrame {
+public class ZavrsavanjeVoznjeUlogaVozacForma extends JFrame {
 	
 	private JLabel lblIdVoznje = new JLabel("ID voznje: ");
 	private JTextField txtIdVoznje = new JTextField(20);
@@ -38,14 +38,16 @@ public class NarucivanjeVoznjeMusterijaForma extends JFrame {
 	private JTextField txtTrajanjeVoznje = new JTextField(20);
 	private JLabel lblStatusVoznje = new JLabel("Status voznje: ");
 	private JComboBox<StatusVoznje> cbStatusVoznje = new JComboBox<StatusVoznje>(StatusVoznje.values());
-	private JButton btnNaruci = new JButton("Naruci");
+	private JButton btnPrihvatiOdbij = new JButton("Zavrsi voznju");
 	
 	private TaksiSluzba taksiSluzba;
 	private Voznja voznja;
 	
-	public NarucivanjeVoznjeMusterijaForma(TaksiSluzba taksiSluzba, Voznja voznja) {
+	public ZavrsavanjeVoznjeUlogaVozacForma(TaksiSluzba taksiSluzba, Voznja voznja) {
 		this.taksiSluzba = taksiSluzba;
 		this.voznja = voznja;
+		
+		setTitle("Prihvatanje/odbijanje voznje -" + voznja.getIdVoznje());
 		
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setLocationRelativeTo(null);
@@ -68,9 +70,9 @@ public class NarucivanjeVoznjeMusterijaForma extends JFrame {
 			cbImeVozaca.addItem(vozac.getKorisnickoIme());
 		}
 		
-//		if (voznja != null) {
-//			popuniPolja();
-//		}
+		if (voznja != null) {
+			popuniPolja();
+		}
 		
 		add(lblIdVoznje);
 		add(txtIdVoznje);
@@ -91,26 +93,23 @@ public class NarucivanjeVoznjeMusterijaForma extends JFrame {
 		add(lblStatusVoznje);
 		add(cbStatusVoznje);
 		add(new JLabel());
-		add(btnNaruci);
+		add(btnPrihvatiOdbij);
 		
 		int random = (int)(Math.random() * 999999 + 100000);
 		String voznjaId = Integer.toString(random);
 		txtIdVoznje.setText(voznjaId);
 		txtIdVoznje.setEditable(false);
+		txtDatumIVremePorudzbine.setEditable(false);
+		txtAdresaPolaska.setEditable(false);
+		txtAdresaDestinacije.setEditable(false);
+		cbImeMusterije.setEnabled(false);
 		cbImeVozaca.setEnabled(false);
-		double brojPredjenihKilometara = 0;
-		String brojKilometara = Double.toString(brojPredjenihKilometara);
-		txtBrojPredjenihKilometara.setText(brojKilometara);
-		txtBrojPredjenihKilometara.setEditable(false);
-		txtTrajanjeVoznje.setText("0");
-		txtTrajanjeVoznje.setEditable(false);
-		cbStatusVoznje.setEnabled(false);
 		
 	}
 	
 	private void initActions() {
 		
-		btnNaruci.addActionListener(new ActionListener() {
+		btnPrihvatiOdbij.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				
@@ -128,23 +127,46 @@ public class NarucivanjeVoznjeMusterijaForma extends JFrame {
 					String trajanjeVoznje = txtTrajanjeVoznje.getText().trim();
 					StatusVoznje statusVoznje = (StatusVoznje)cbStatusVoznje.getSelectedItem();
 					
-					//DODAVANJE
-					if (voznja == null) {
-						txtIdVoznje.setEditable(false);
-						Voznja novaVoznja = new Voznja(idVoznje, datumIVremePorudzbine, adresaPolaska, adresaDestinacije, musterija, vozac, brojPredjenihKilometara, trajanjeVoznje, statusVoznje, false);
-						taksiSluzba.dodajVoznju(novaVoznja);
-						txtIdVoznje.setEditable(false);
+					//IZMENA
+					if (voznja != null) {
+						
+						voznja.setIdVoznje(idVoznje);
+						voznja.setDatumIVremePorudzbine(datumIVremePorudzbine);
+						voznja.setAdresaPolaska(adresaPolaska);
+						voznja.setAdresaDestinacije(adresaDestinacije);
+						voznja.setImeMusterije(musterija);
+						voznja.setImeVozaca(vozac);
+						voznja.setBrojPredjenihKilometara(brojPredjenihKilometara);
+						voznja.setTrajanjeVoznje(trajanjeVoznje);
+						voznja.setStatusVoznje(statusVoznje);
 					}
-					
-				    JOptionPane.showMessageDialog(null, "Voznja je uspesno narucena!", "Obavestenje", JOptionPane.INFORMATION_MESSAGE);
+						
+					JOptionPane.showMessageDialog(null, "Voznja je uspesno zavrsena!", "Obavestenje", JOptionPane.INFORMATION_MESSAGE);
 					taksiSluzba.snimiVoznju(Main.VOZNJE_FAJL);
-					NarucivanjeVoznjeMusterijaForma.this.dispose();
-					NarucivanjeVoznjeMusterijaForma.this.setVisible(false);
+					ZavrsavanjeVoznjeUlogaVozacForma.this.dispose();
+					ZavrsavanjeVoznjeUlogaVozacForma.this.setVisible(false);
 					
 				}
 				
 			}
 		});
+		
+	}
+	
+	private void popuniPolja() {
+		
+		txtIdVoznje.setText(voznja.getIdVoznje());
+		txtIdVoznje.setEditable(false);
+		txtDatumIVremePorudzbine.setText(voznja.getDatumIVremePorudzbine());
+		txtDatumIVremePorudzbine.setEditable(false);
+		txtAdresaPolaska.setText(voznja.getAdresaPolaska());
+		txtAdresaDestinacije.setText(voznja.getAdresaDestinacije());
+		cbImeMusterije.setSelectedItem(voznja.getImeMusterije());
+		cbImeMusterije.setEnabled(false);
+		cbImeVozaca.setSelectedItem(voznja.getImeVozaca());
+		txtBrojPredjenihKilometara.setText(String.valueOf(voznja.getBrojPredjenihKilometara()));
+		txtTrajanjeVoznje.setText(voznja.getTrajanjeVoznje());
+		cbStatusVoznje.setSelectedItem(voznja.getStatusVoznje());
 		
 	}
 	

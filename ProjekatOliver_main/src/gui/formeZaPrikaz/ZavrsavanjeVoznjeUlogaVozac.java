@@ -14,12 +14,11 @@ import javax.swing.JToolBar;
 import javax.swing.ListSelectionModel;
 import javax.swing.table.DefaultTableModel;
 
-import gui.FormeZaDodavanjeIIzmenu.DodeljivanjeVoznjeVozacuUlogaDispecerForma;
-import gui.FormeZaDodavanjeIIzmenu.VoznjeDispecerForma;
+import gui.FormeZaDodavanjeIIzmenu.ZavrsavanjeVoznjeUlogaVozacForma;
 import taksiSluzba.TaksiSluzba;
 import voznja.Voznja;
 
-public class DodeljivanjeVoznjeVozacuUlogaDispecer extends JFrame {
+public class ZavrsavanjeVoznjeUlogaVozac extends JFrame {
 	
 	private JToolBar mainToolbar = new JToolBar();
 	private JButton btnIzmeni = new JButton();
@@ -29,7 +28,7 @@ public class DodeljivanjeVoznjeVozacuUlogaDispecer extends JFrame {
 	
 	private TaksiSluzba taksiSluzba;
 	
-	public DodeljivanjeVoznjeVozacuUlogaDispecer(TaksiSluzba taksiSluzba) {
+	public ZavrsavanjeVoznjeUlogaVozac(TaksiSluzba taksiSluzba) {
 		this.taksiSluzba = taksiSluzba;
 		setTitle("Voznje");
 		setSize(500, 300);
@@ -49,10 +48,10 @@ public class DodeljivanjeVoznjeVozacuUlogaDispecer extends JFrame {
 		add(mainToolbar, BorderLayout.NORTH);
 		
 		String[] zaglavlje = new String[] {"ID Voznje", "Datum i vreme porudzbine", "Adresa polaska", "Adresa destinacije", "Ime musterije", "Ime vozaca", "Broj predjenih kilometara", "Trajanje voznje", "Status voznje", "Obrisan"};
-		Object[][] sadrzaj = new Object[taksiSluzba.sveKreiraneVoznje().size()][zaglavlje.length];
+		Object[][] sadrzaj = new Object[taksiSluzba.svePrihvaceneVoznje().size()][zaglavlje.length];
 		
-		for (int i = 0; i < taksiSluzba.sveKreiraneVoznje().size(); i++) {
-			Voznja voznja = taksiSluzba.sveKreiraneVoznje().get(i);
+		for (int i = 0; i < taksiSluzba.svePrihvaceneVoznje().size(); i++) {
+			Voznja voznja = taksiSluzba.svePrihvaceneVoznje().get(i);
 	
 			sadrzaj[i][0] = voznja.getIdVoznje();
 			sadrzaj[i][1] = voznja.getDatumIVremePorudzbine();
@@ -105,8 +104,8 @@ public class DodeljivanjeVoznjeVozacuUlogaDispecer extends JFrame {
 					if (voznja == null) {
 						JOptionPane.showMessageDialog(null, "Greska prilikom pronalazenja voznje sa tim ID-om", "Greska", JOptionPane.WARNING_MESSAGE);
 					} else {
-						DodeljivanjeVoznjeVozacuUlogaDispecerForma dodeljivanjeVoznjeVozacuUlogaDispecerForma = new DodeljivanjeVoznjeVozacuUlogaDispecerForma(taksiSluzba, voznja);
-						dodeljivanjeVoznjeVozacuUlogaDispecerForma.setVisible(true);	
+						ZavrsavanjeVoznjeUlogaVozacForma zavrsavanjeVoznjeUlogaVozacForma = new ZavrsavanjeVoznjeUlogaVozacForma(taksiSluzba, voznja);
+						zavrsavanjeVoznjeUlogaVozacForma.setVisible(true);
 					}
 				}
 			}

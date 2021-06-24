@@ -151,6 +151,39 @@ public class TaksiSluzba {
 		return null;
 	}
 	
+	public ArrayList<Voznja> sveKreiraneVoznje() {
+		ArrayList<Voznja> kreiraneVoznje = new ArrayList<Voznja>();
+		for (Voznja voznja : voznje) {
+			voznja.getStatusVoznje();
+			if (!voznja.isObrisan() && voznja.getStatusVoznje().equals(StatusVoznje.KREIRANA)) {
+				kreiraneVoznje.add(voznja);
+			}
+		}
+		return kreiraneVoznje;
+	}
+	
+	public ArrayList<Voznja> sveDodeljeneVoznje() {
+		ArrayList<Voznja> dodeljeneVoznje = new ArrayList<Voznja>();
+		for (Voznja voznja : voznje) {
+			voznja.getStatusVoznje();
+			if (!voznja.isObrisan() && voznja.getStatusVoznje().equals(StatusVoznje.DODELJENA)) {
+				dodeljeneVoznje.add(voznja);
+			}
+		}
+		return dodeljeneVoznje;
+	}
+	
+	public ArrayList<Voznja> svePrihvaceneVoznje() {
+		ArrayList<Voznja> prihvaceneVoznje = new ArrayList<Voznja>();
+		for (Voznja voznja : voznje) {
+			voznja.getStatusVoznje();
+			if (!voznja.isObrisan() && voznja.getStatusVoznje().equals(StatusVoznje.PRIHVACENA)) {
+				prihvaceneVoznje.add(voznja);
+			}
+		}
+		return prihvaceneVoznje;
+	}
+	
 	public Dispecer loginDispecer(String korisnickoIme, String lozinka) {
 		for (Dispecer dispecer : dispeceri) {
 			if (dispecer.getKorisnickoIme().equalsIgnoreCase(korisnickoIme) &&
