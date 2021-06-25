@@ -101,7 +101,7 @@ public class NarucivanjeVoznjeMusterijaForma extends JFrame {
 		String voznjaId = Integer.toString(random);
 		txtIdVoznje.setText(voznjaId);
 		txtIdVoznje.setEditable(false);
-		cbImeMusterije.setEnabled(false);
+//		cbImeMusterije.setEnabled(false);
 		cbImeVozaca.setEnabled(false);
 		double brojPredjenihKilometara = 0;
 		String brojKilometara = Double.toString(brojPredjenihKilometara);
