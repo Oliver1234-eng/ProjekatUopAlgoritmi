@@ -1,5 +1,5 @@
-001|null|null|null|null|null|null|1|null|false|0|0|AUTO1
+001|null|null|null|null|null|null|1|null|false|0.0|0|AUTO1
 002|TestVozac|testVozac123|ImeVozac|PrezimeVozac|JMBGVozac|AdresaVozac|1|0638924371|false|60000.6|10|AUTO1
 003|TestVozac2|testVozac1234|ImeVozac2|PrezimeVozac2|JMBGVozac2|AdresaVozac2|1|0638924371|false|55000.6|11|AUTO2
-004|TestVozac3|testVozac12345|ImeVozac3|PrezimeVozac3|JMBGVozac3|AdresaVozac3|1|0638924371|false|58000.6|12|AUTO4
+004|TestVozac3|testVozac12345|ImeVozac3|PrezimeVozac3|JMBGVozac3|AdresaVozac3|1|0638924372|false|58000.6|12|AUTO1
 005|Test123|Test|TestImee|TestPrezime|TestJMBG|TestAdresa|0|0619273812|true|65000.0|13|AUTO1

@@ -4,3 +4,5 @@
 1025730|24.06.2021.|ADRESA1|ADRESA2|TestMusterija|null|30.0|15min|4|false
 500789|24.06.2021.|ADRESAPOLASKA|ADRESADESTINACIJE|TestMusterija|null|50.0|20min|4|false
 763263|24.06.2021.|Mol|NoviSad|TestMusterija|TestVozac|30.0|5min|4|false
+397976|25.06.2021.|ADRESAPOLASKA1|ADRESADESTINACIJE1|TestMusterija|TestVozac|100.0|40min|4|false
+878936|25.06.2021.|POLAZAK1|DOLAZAK1|TestMusterija|TestVozac|0.0|0|5|false
