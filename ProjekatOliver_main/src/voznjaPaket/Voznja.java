@@ -2,8 +2,8 @@ package voznjaPaket;
 
 import java.util.Date;
 
-import osobe.Musterija;
-import osobe.Vozac;
+import osobePaket.Musterija;
+import osobePaket.Vozac;
 
 public class Voznja {
 	

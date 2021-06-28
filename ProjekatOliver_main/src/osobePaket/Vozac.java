@@ -1,6 +1,6 @@
 package osobePaket;
 
-import automobil.Automobil;
+import automobilPaket.Automobil;
 
 public class Vozac extends Korisnik {
 	
