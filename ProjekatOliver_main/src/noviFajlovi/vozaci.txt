@@ -1,0 +1,5 @@
+1|null|null|null|null|null|null|1|null|false|0.0|0|NS-153-HE
+2|TestVozac|testVozac123|ImeVozac|PrezimeVozac|JMBGVozac|AdresaVozac|1|0638924371|false|60000.6|10|NS-153-HE
+3|TestVozac2|testVozac1234|ImeVozac2|PrezimeVozac2|JMBGVozac2|AdresaVozac2|1|0638924371|false|55000.6|11|NS-253-JS
+4|TestVozac3|testVozac12345|ImeVozac3|PrezimeVozac3|JMBGVozac3|AdresaVozac3|1|0638924371|false|58000.6|12|NS-312-FS
+5|Oliver123|Oliver123|Oliver|Kojic|JMBG|Ive Lole Ribara 9|1|0637504479|false|65000.0|6|NS-153-HE

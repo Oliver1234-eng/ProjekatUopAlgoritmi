@@ -7,3 +7,4 @@
 397976|25.06.2021.|ADRESAPOLASKA1|ADRESADESTINACIJE1|TestMusterija|TestVozac|100.0|40min|4|false
 878936|25.06.2021.|POLAZAK1|DOLAZAK1|TestMusterija|TestVozac|0.0|0|5|false
 389738|25.06.2021.|PoslednjiTestAdresa|PoslednjiTestAdresa|TestMusterija|TestVozac|25.0|12min|4|false
+108188|SAFAWWA|DAWWASD|AFDAWDAW|TestMusterija|null|0.0|0|0|false
