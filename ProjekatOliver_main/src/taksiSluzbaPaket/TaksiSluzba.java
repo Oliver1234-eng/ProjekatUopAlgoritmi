@@ -690,7 +690,7 @@ public class TaksiSluzba {
 	
 	public void ucitajVoznje(String imeFajla) {
 		try {
-			File file = new File("src/fajlovi/" + imeFajla);
+			File file = new File("src/noviFajlovi/" + imeFajla);
 			BufferedReader reader = new BufferedReader(new FileReader(file));
 			String line = null;
 			DateFormat convert = new SimpleDateFormat("dd.MM.yyyy HH.mm");

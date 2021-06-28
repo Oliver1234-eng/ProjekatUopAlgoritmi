@@ -1,4 +1,0 @@
-001|TestDispecer|testDispecer123|ImeDispecer|PrezimeDispecer|JMBGDispecer|AdresaDispecer|1|0638293614|false|50000.5|1|1
-002|TestDispecer2|testDispecer1234|ImeDispecer2|PrezimeDispecer2|JMBGDispecer2|AdresaDispecer2|1|0638293614|false|55000.5|2|0
-003|TestDispecer3|testDispecer12345|ImeDispecer3|PrezimeDispecer3|JMBGDispecer3|AdresaDispecer3|1|0638293614|false|56000.5|4|0
-004|Test123|Testt|TestIme|TestPrezime|TestJMBG|TestAdresa|0|0618291861|true|70000.0|4|0

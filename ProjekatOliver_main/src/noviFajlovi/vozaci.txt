@@ -3,3 +3,4 @@
 3|TestVozac2|testVozac1234|ImeVozac2|PrezimeVozac2|JMBGVozac2|AdresaVozac2|1|0638924371|false|55000.6|11|NS-253-JS
 4|TestVozac3|testVozac12345|ImeVozac3|PrezimeVozac3|JMBGVozac3|AdresaVozac3|1|0638924371|false|58000.6|12|NS-312-FS
 5|Oliver123|Oliver123|Oliver|Kojic|JMBG|Ive Lole Ribara 9|1|0637504479|false|65000.0|6|NS-153-HE
+6|Proba123|Proba123|Proba1|Probic|JMBG|ProbaAdresa|0|BrTel|true|65000.0|13|NS-153-HE
