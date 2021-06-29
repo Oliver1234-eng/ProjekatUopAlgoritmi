@@ -14,6 +14,11 @@ import automobilPaket.Automobil;
 import automobilPaket.Model;
 import automobilPaket.Proizvodjac;
 import automobilPaket.VrstaAutomobila;
+import binarnaPretragaPaket.IDSorterAutomobil;
+import binarnaPretragaPaket.IDSorterDispecer;
+import binarnaPretragaPaket.IDSorterMusterija;
+import binarnaPretragaPaket.IDSorterVozac;
+import binarnaPretragaPaket.IDSorterVoznja;
 import osobePaket.Dispecer;
 import osobePaket.Musterija;
 import osobePaket.OdeljenjeDispecer;
@@ -843,6 +848,121 @@ public class TaksiSluzba {
 			e.printStackTrace();
 			
 		}
+	}
+	
+	public Dispecer pronadjiDispeceraBinarnaPretraga(int id) {
+		ArrayList<Dispecer> dispeceri = getDispeceri();
+		dispeceri.sort(new IDSorterDispecer());
+		int left = 0;
+		int right = dispeceri.size() - 1;
+		while(left <= right) {
+			int middle = (left + right) / 2;
+			if (id < dispeceri.get(middle).getIdKorisnika()) {
+				right = middle - 1;
+			}
+			
+			else if (id > dispeceri.get(middle).getIdKorisnika()) {
+				right = middle + 1;
+			}
+			
+			else {
+				return dispeceri.get(middle);
+			}
+		}
+		
+		return null;
+	}
+	
+	public Automobil pronadjiAutomobilBinarnaPretraga(int id) {
+		ArrayList<Automobil> automobili = getAutomobili();
+		automobili.sort(new IDSorterAutomobil());
+		int left = 0;
+		int right = automobili.size() - 1;
+		while(left <= right) {
+			int middle = (left + right) / 2;
+			if (id < automobili.get(middle).getIdAutomobila()) {
+				right = middle - 1;
+			}
+			
+			else if (id > automobili.get(middle).getIdAutomobila()) {
+				right = middle + 1;
+			}
+			
+			else {
+				return automobili.get(middle);
+			}
+		}
+		
+		return null;
+	}
+	
+	public Vozac pronadjiVozacaBinarnaPretraga(int id) {
+		ArrayList<Vozac> vozaci = getVozaci();
+		vozaci.sort(new IDSorterVozac());
+		int left = 0;
+		int right = vozaci.size() - 1;
+		while(left <= right) {
+			int middle = (left + right) / 2;
+			if (id < vozaci.get(middle).getIdKorisnika()) {
+				right = middle - 1;
+			}
+			
+			else if (id > vozaci.get(middle).getIdKorisnika()) {
+				right = middle + 1;
+			}
+			
+			else {
+				return vozaci.get(middle);
+			}
+		}
+		
+		return null;
+	}
+	
+	public Musterija pronadjiMusterijuBinarnaPretraga(int id) {
+		ArrayList<Musterija> musterije = getMusterije();
+		musterije.sort(new IDSorterMusterija());
+		int left = 0;
+		int right = musterije.size() - 1;
+		while(left <= right) {
+			int middle = (left + right) / 2;
+			if (id < musterije.get(middle).getIdKorisnika()) {
+				right = middle - 1;
+			}
+			
+			else if (id > musterije.get(middle).getIdKorisnika()) {
+				right = middle + 1;
+			}
+			
+			else {
+				return musterije.get(middle);
+			}
+		}
+		
+		return null;
+	}
+	
+	public Voznja pronadjiVoznjuBinarnaPretraga(int id) {
+		ArrayList<Voznja> voznje = getVoznje();
+		voznje.sort(new IDSorterVoznja());
+		int left = 0;
+		int right = voznje.size() - 1;
+		while(left <= right) {
+			int middle = (left + right) / 2;
+			if (id < voznje.get(middle).getIdVoznje()) {
+				right = middle - 1;
+			}
+			
+			else if (id > voznje.get(middle).getIdVoznje()) {
+				right = middle + 1;
+			}
+			
+			else {
+				return voznje.get(middle);
+			}
+		}
+		
+		return null;
 	}
 	
 }

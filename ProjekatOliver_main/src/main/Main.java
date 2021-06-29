@@ -18,6 +18,7 @@ import osobePaket.Vozac;
 import taksiSluzbaPaket.TaksiSluzba;
 import voznjaPaket.StatusVoznje;
 import voznjaPaket.Voznja;
+import binarnaPretragaPaket.IDSorterDispecer;
 
 public class Main {
 	
@@ -36,16 +37,22 @@ public class Main {
 		taksiSluzba.ucitajMusterije(MUSTERIJE_FAJL);
 		taksiSluzba.ucitajVoznje(VOZNJE_FAJL);
 		
+		System.out.println(taksiSluzba.pronadjiDispeceraBinarnaPretraga(1));
+		System.out.println(taksiSluzba.pronadjiAutomobilBinarnaPretraga(2));
+		System.out.println(taksiSluzba.pronadjiVozacaBinarnaPretraga(1));
+		System.out.println(taksiSluzba.pronadjiMusterijuBinarnaPretraga(1));
+		System.out.println(taksiSluzba.pronadjiVoznjuBinarnaPretraga(1));
+		
 		//LOGIN PROZORI ZA SVAKU ULOGU KORISNIKA
 		
 		LoginProzorDispecer loginProzorDispecer = new LoginProzorDispecer(taksiSluzba);
-		loginProzorDispecer.setVisible(true);
+		loginProzorDispecer.setVisible(false);
 		
 		LoginProzorVozac loginProzorVozac = new LoginProzorVozac(taksiSluzba);
-		loginProzorVozac.setVisible(true);
+		loginProzorVozac.setVisible(false);
 		
 		LoginProzorMusterija loginProzorMusterija = new LoginProzorMusterija(taksiSluzba);
-		loginProzorMusterija.setVisible(true);
+		loginProzorMusterija.setVisible(false);
 		
 		//CRUD za dispecere, vozace i voznje
 	
