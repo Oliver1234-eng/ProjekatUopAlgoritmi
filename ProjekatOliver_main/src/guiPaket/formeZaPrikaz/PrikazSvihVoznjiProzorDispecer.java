@@ -1,13 +1,27 @@
 package guiPaket.formeZaPrikaz;
 
 import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.regex.PatternSyntaxException;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
+import javax.swing.JTextField;
 import javax.swing.JToolBar;
 import javax.swing.ListSelectionModel;
+import javax.swing.RowFilter;
+import javax.swing.RowSorter;
+import javax.swing.SortOrder;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
+import javax.swing.table.TableRowSorter;
 
 import taksiSluzbaPaket.TaksiSluzba;
 import voznjaPaket.Voznja;
@@ -74,6 +88,63 @@ public class PrikazSvihVoznjiProzorDispecer extends JFrame {
 		
 		JScrollPane scrollPane = new JScrollPane(prikazVoznjiTabela);
 		add(scrollPane, BorderLayout.CENTER);
+		
+		TableRowSorter<TableModel> sorter = new TableRowSorter<TableModel>(prikazVoznjiTabela.getModel());
+        prikazVoznjiTabela.setRowSorter(sorter);
+
+        List<RowSorter.SortKey> sortKeys = new ArrayList<>(25);
+        sortKeys.add(new RowSorter.SortKey(0, SortOrder.ASCENDING));
+        sortKeys.add(new RowSorter.SortKey(1, SortOrder.ASCENDING));
+        sortKeys.add(new RowSorter.SortKey(2, SortOrder.ASCENDING));
+        sortKeys.add(new RowSorter.SortKey(3, SortOrder.ASCENDING));
+        sortKeys.add(new RowSorter.SortKey(4, SortOrder.ASCENDING));
+        sortKeys.add(new RowSorter.SortKey(5, SortOrder.ASCENDING));
+        sortKeys.add(new RowSorter.SortKey(6, SortOrder.ASCENDING));
+        sortKeys.add(new RowSorter.SortKey(7, SortOrder.ASCENDING));
+        sortKeys.add(new RowSorter.SortKey(8, SortOrder.ASCENDING));
+        sortKeys.add(new RowSorter.SortKey(9, SortOrder.ASCENDING));
+        sorter.setSortKeys(sortKeys);
+        
+        tableModel = new DefaultTableModel(sadrzaj, zaglavlje) {
+        	
+        public Class getColumnClass(int column) {
+               Class returnValue;
+               if((column >= 0) && (column < getColumnCount())) {
+                  returnValue = getValueAt(0, column).getClass();
+               } else {
+                  returnValue = Object.class;
+               }
+               return returnValue;
+            }
+         };
+         
+         prikazVoznjiTabela.setRowSorter(sorter);
+         add(new JScrollPane(prikazVoznjiTabela), BorderLayout.CENTER);
+         JPanel panel = new JPanel(new BorderLayout());
+         JLabel label = new JLabel("Kombinovana pretraga (po bilo cemu): ");
+         panel.add(label, BorderLayout.WEST);
+         final JTextField filterText = new JTextField("");
+         panel.add(filterText, BorderLayout.CENTER);
+         add(panel, BorderLayout.NORTH);
+         JButton button = new JButton("Pretrazi");
+         button.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+               String text = filterText.getText();
+               if(text.length() == 0) {
+                  sorter.setRowFilter(null);
+               } else {
+                  try {
+                     sorter.setRowFilter(RowFilter.regexFilter(text));
+                  } catch(PatternSyntaxException pse) {
+                        System.out.println("Bad regex pattern");
+                  }
+                }
+            }
+         });
+         add(button, BorderLayout.SOUTH);
+         setSize(400, 300);
+         setLocationRelativeTo(null);
+         setVisible(true);
 		
 	}
 	

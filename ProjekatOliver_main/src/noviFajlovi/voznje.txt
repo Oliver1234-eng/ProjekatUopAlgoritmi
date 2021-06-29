@@ -1,6 +1,7 @@
-1|28.06.2021 12.22|TestAdresa1|TestAdresa2|TestMusterija|TestVozac|30.0|15min|0|false
+1|29.06.2021 14.05|TestAdresa1|TestAdresa2|TestMusterija|TestVozac|0.0|0|2|false
 2|28.06.2021 16.00|Mol|Novi Sad|TestMusterija|TestVozac|65.0|60min|0|false
 3|28.06.2021 16.07|Novi Sad|Mol|TestMusterija|null|65.0|60min|4|false
 4|28.06.2021 19.58|ProbaA1|ProbaA2|TestMusterija|TestVozac|35.0|17min|0|false
 5|28.06.2021 20.01|Ada|Mol|TestMusterija|null|10.0|5min|4|false
 6|28.06.2021 20.05|Mol|Novi Sad|TestMusterija|null|70.0|85min|4|false
+7|29.06.2021 14.09|Becej|Novi Sad|TestMusterija|null|45.0|45min|4|false

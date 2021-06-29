@@ -112,16 +112,20 @@ public class VozaciProzorDispecer extends JFrame {
         vozaciTabela.setRowSorter(sorter);
 
         List<RowSorter.SortKey> sortKeys = new ArrayList<>(25);
-        sortKeys.add(new RowSorter.SortKey(4, SortOrder.ASCENDING));
         sortKeys.add(new RowSorter.SortKey(0, SortOrder.ASCENDING));
+        sortKeys.add(new RowSorter.SortKey(1, SortOrder.ASCENDING));
+        sortKeys.add(new RowSorter.SortKey(2, SortOrder.ASCENDING));
+        sortKeys.add(new RowSorter.SortKey(3, SortOrder.ASCENDING));
+        sortKeys.add(new RowSorter.SortKey(4, SortOrder.ASCENDING));
+        sortKeys.add(new RowSorter.SortKey(5, SortOrder.ASCENDING));
+        sortKeys.add(new RowSorter.SortKey(6, SortOrder.ASCENDING));
+        sortKeys.add(new RowSorter.SortKey(7, SortOrder.ASCENDING));
+        sortKeys.add(new RowSorter.SortKey(8, SortOrder.ASCENDING));
+        sortKeys.add(new RowSorter.SortKey(9, SortOrder.ASCENDING));
+        sortKeys.add(new RowSorter.SortKey(10, SortOrder.ASCENDING));
+        sortKeys.add(new RowSorter.SortKey(11, SortOrder.ASCENDING));
+        sortKeys.add(new RowSorter.SortKey(12, SortOrder.ASCENDING));
         sorter.setSortKeys(sortKeys);
-
-//        JFrame frame = new JFrame("Testing");
-//        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//        frame.add(new JScrollPane(vozaciTabela));
-//        frame.pack();
-//        frame.setLocationRelativeTo(null);
-//        frame.setVisible(true);
         
         tableModel = new DefaultTableModel(sadrzaj, zaglavlje) {
         	
@@ -136,16 +140,15 @@ public class VozaciProzorDispecer extends JFrame {
             }
          };
          
-//         final TableRowSorter<TableModel> sorter = new TableRowSorter<TableModel>(tableModel);
          vozaciTabela.setRowSorter(sorter);
          add(new JScrollPane(vozaciTabela), BorderLayout.CENTER);
          JPanel panel = new JPanel(new BorderLayout());
-         JLabel label = new JLabel("Filter");
+         JLabel label = new JLabel("Kombinovana pretraga (po bilo cemu): ");
          panel.add(label, BorderLayout.WEST);
          final JTextField filterText = new JTextField("");
          panel.add(filterText, BorderLayout.CENTER);
          add(panel, BorderLayout.NORTH);
-         JButton button = new JButton("Filter");
+         JButton button = new JButton("Pretrazi");
          button.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                String text = filterText.getText();
@@ -162,7 +165,6 @@ public class VozaciProzorDispecer extends JFrame {
          });
          add(button, BorderLayout.SOUTH);
          setSize(400, 300);
-         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
          setLocationRelativeTo(null);
          setVisible(true);
 		
