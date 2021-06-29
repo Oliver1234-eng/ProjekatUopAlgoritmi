@@ -65,7 +65,7 @@ public class MusterijeDispecerForma extends JFrame {
 	
 	private void initGUI() {
 		
-		MigLayout layout = new MigLayout("wrap 2", "[][]", "[][][][][][][][][][][][]20[]" );
+		MigLayout layout = new MigLayout("wrap 2", "[][]", "[][][][][][][][][]20[]" );
 		setLayout(layout);
 		
 		if(musterija != null) {

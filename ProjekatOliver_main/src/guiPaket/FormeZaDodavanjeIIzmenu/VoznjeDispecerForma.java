@@ -184,9 +184,10 @@ public class VoznjeDispecerForma extends JFrame {
 		boolean ok = true;
 		String poruka = "Molimo ispravite sledece greske prilikom unosa: \n";
 		
-		if (txtIdVoznje.getText().trim().equals("")) {
-			poruka += "- Unesite ID voznje \n";
-			ok = false;
+		try {
+			Integer.parseInt(txtIdVoznje.getText().trim());
+		} catch (NumberFormatException e) {
+			poruka += "- ID voznje mora biti broj \n";
 		}
 		
 		if (txtAdresaPolaska.getText().trim().equals("")) {

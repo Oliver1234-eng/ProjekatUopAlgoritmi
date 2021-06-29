@@ -8,6 +8,7 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
+import guiPaket.formeZaPrikaz.AutomobiliProzorDispecer;
 import guiPaket.formeZaPrikaz.DispeceriProzorDispecer;
 import guiPaket.formeZaPrikaz.DodeljivanjeVoznjeVozacuUlogaDispecer;
 import guiPaket.formeZaPrikaz.MusterijeProzorDispecer;
@@ -105,6 +106,15 @@ public class GlavniProzorDispecer extends JFrame {
 				
 				MusterijeProzorDispecer musterijeProzorDispecer = new MusterijeProzorDispecer(taksiSluzba);
 				musterijeProzorDispecer.setVisible(true);
+			}
+		});
+		
+		automobili.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				AutomobiliProzorDispecer automobiliProzorDispecer = new AutomobiliProzorDispecer(taksiSluzba);
+				automobiliProzorDispecer.setVisible(true);
 			}
 		});
 	
