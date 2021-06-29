@@ -10,6 +10,7 @@ import javax.swing.JMenuItem;
 
 import guiPaket.formeZaPrikaz.DispeceriProzorDispecer;
 import guiPaket.formeZaPrikaz.DodeljivanjeVoznjeVozacuUlogaDispecer;
+import guiPaket.formeZaPrikaz.MusterijeProzorDispecer;
 import guiPaket.formeZaPrikaz.PrikazSvihVoznjiProzorDispecer;
 import guiPaket.formeZaPrikaz.VozaciProzorDispecer;
 import guiPaket.formeZaPrikaz.VoznjeProzorDispecer;
@@ -27,6 +28,10 @@ public class GlavniProzorDispecer extends JFrame {
 	private JMenuItem voznje = new JMenuItem("Voznje");
 	private JMenu CRUDdispeceriMeni = new JMenu("CRUD dispeceri");
 	private JMenuItem dispeceri = new JMenuItem("Dispeceri");
+	private JMenu CRUDmusterijeMeni = new JMenu("CRUD musterije");
+	private JMenuItem musterije = new JMenuItem("Musterije");
+	private JMenu CRUDautomobiliMeni = new JMenu("CRUD automobili");
+	private JMenuItem automobili = new JMenuItem("Automobili");
 	private JMenu prikazSvihVoznji = new JMenu("Prikaz svih voznji");
 	private JMenuItem prikazVoznji = new JMenuItem("Prikazi sve voznje");
 	private JMenu dodeljivanjeVoznjeVozacu = new JMenu("Dodeljivanje voznje vozacu");
@@ -55,6 +60,10 @@ public class GlavniProzorDispecer extends JFrame {
 		CRUDvoznjeMeni.add(voznje);
 		glavniMeniDispecer.add(CRUDdispeceriMeni);
 		CRUDdispeceriMeni.add(dispeceri);
+		glavniMeniDispecer.add(CRUDmusterijeMeni);
+		CRUDmusterijeMeni.add(musterije);
+		glavniMeniDispecer.add(CRUDautomobiliMeni);
+		CRUDautomobiliMeni.add(automobili);
 		glavniMeniDispecer.add(prikazSvihVoznji);
 		prikazSvihVoznji.add(prikazVoznji);
 		glavniMeniDispecer.add(dodeljivanjeVoznjeVozacu);
@@ -90,6 +99,15 @@ public class GlavniProzorDispecer extends JFrame {
 			}
 		});
 		
+		musterije.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				MusterijeProzorDispecer musterijeProzorDispecer = new MusterijeProzorDispecer(taksiSluzba);
+				musterijeProzorDispecer.setVisible(true);
+			}
+		});
+	
 		prikazVoznji.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
