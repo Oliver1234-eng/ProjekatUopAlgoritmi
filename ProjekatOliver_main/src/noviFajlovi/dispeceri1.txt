@@ -1,4 +1,4 @@
 1|TestDispecer|testDispecer123|ImeDispecer1|PrezimeDispecer|JMBGDispecer|AdresaDispecer|1|0638293614|false|50000.5|1|1
-2|TestDispecer2|testDispecer1234|ImeDispecer2|PrezimeDispecer2|JMBGDispecer2|AdresaDispecer2|1|0638293614|false|55000.5|2|0
-3|TestDispecer3|testDispecer12345|ImeDispecer3|PrezimeDispecer3|JMBGDispecer3|AdresaDispecer3|1|0638293614|false|56000.5|3|0
-4|Oliver123|Oliver123|Oliver|Kojic|JMBG|Ive Lole Ribara 9|1|0637504479|false|70000.0|4|0
+2|TestDispecer2|testDispecer1234|ImeDispecer2|PrezimeDispecer2|JMBGDispecer2|AdresaDispecer2|1|0638293614|true|55000.5|2|0
+3|TestDispecer3|testDispecer12345|ImeDispecer3|PrezimeDispecer3|JMBGDispecer3|AdresaDispecer3|1|0638293614|true|56000.5|3|0
+4|Oliver123|Oliver123|Oliver|Kojic|JMBG|Ive Lole Ribara 9|1|0637504479|true|70000.0|4|0

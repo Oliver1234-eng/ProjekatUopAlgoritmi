@@ -8,6 +8,7 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
+import guiPaket.formeZaPrikaz.AukcijaUlogaDispecer;
 import guiPaket.formeZaPrikaz.AutomobiliProzorDispecer;
 import guiPaket.formeZaPrikaz.DispeceriProzorDispecer;
 import guiPaket.formeZaPrikaz.DodeljivanjeVoznjeVozacuUlogaDispecer;
@@ -37,6 +38,10 @@ public class GlavniProzorDispecer extends JFrame {
 	private JMenuItem prikazVoznji = new JMenuItem("Prikazi sve voznje");
 	private JMenu dodeljivanjeVoznjeVozacu = new JMenu("Dodeljivanje voznje vozacu");
 	private JMenuItem dodelaVoznje = new JMenuItem("Dodeli voznju vozacu");
+	private JMenu aukcijaMeni = new JMenu("Aukcija");
+	private JMenuItem aukcija = new JMenuItem("Aukcija");
+	private JMenu sumiraneStatistikeMeni = new JMenu("Sumirane statistike");
+	private JMenuItem sumiraneStatistike = new JMenuItem("Sumirane statistike");
 	
 	private TaksiSluzba taksiSluzba;
 	private Dispecer prijavljeni;
@@ -69,6 +74,10 @@ public class GlavniProzorDispecer extends JFrame {
 		prikazSvihVoznji.add(prikazVoznji);
 		glavniMeniDispecer.add(dodeljivanjeVoznjeVozacu);
 		dodeljivanjeVoznjeVozacu.add(dodelaVoznje);
+		glavniMeniDispecer.add(aukcijaMeni);
+		aukcijaMeni.add(aukcija);
+		glavniMeniDispecer.add(sumiraneStatistikeMeni);
+		sumiraneStatistikeMeni.add(sumiraneStatistike);
 	}
 	
 	public void initActions() {
@@ -133,6 +142,15 @@ public class GlavniProzorDispecer extends JFrame {
 				
 				DodeljivanjeVoznjeVozacuUlogaDispecer dodeljivanjeVoznjeVozacuUlogaDispecer = new DodeljivanjeVoznjeVozacuUlogaDispecer(taksiSluzba);
 				dodeljivanjeVoznjeVozacuUlogaDispecer.setVisible(true);
+			}
+		});
+		
+		aukcija.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				AukcijaUlogaDispecer aukcijaUlogaDispecer = new AukcijaUlogaDispecer(taksiSluzba);
+				aukcijaUlogaDispecer.setVisible(true);
 			}
 		});
 		
