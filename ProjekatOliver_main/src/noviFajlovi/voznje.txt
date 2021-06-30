@@ -5,3 +5,4 @@
 5|28.06.2021 20.01|Ada|Mol|TestMusterija|null|10.0|5min|4|false
 6|28.06.2021 20.05|Mol|Novi Sad|TestMusterija|null|70.0|85min|4|false
 7|29.06.2021 14.09|Becej|Novi Sad|TestMusterija|null|45.0|45min|4|false
+8|30.06.2021 14.08|Ada|Novi Sad|TestMusterija|null|70.0|90|4|false

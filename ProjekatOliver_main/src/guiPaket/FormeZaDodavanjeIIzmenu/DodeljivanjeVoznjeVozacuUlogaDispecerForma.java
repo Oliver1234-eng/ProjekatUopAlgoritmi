@@ -109,7 +109,7 @@ public class DodeljivanjeVoznjeVozacuUlogaDispecerForma extends JFrame {
 		txtIdVoznje.setEditable(false);
 		txtAdresaPolaska.setEditable(false);
 		txtAdresaDestinacije.setEditable(false);
-		cbImeMusterije.setEnabled(false);
+//		cbImeMusterije.setEnabled(false);
 		double brojPredjenihKilometara = 0;
 		String brojKilometara = Double.toString(brojPredjenihKilometara);
 		txtBrojPredjenihKilometara.setText(brojKilometara);

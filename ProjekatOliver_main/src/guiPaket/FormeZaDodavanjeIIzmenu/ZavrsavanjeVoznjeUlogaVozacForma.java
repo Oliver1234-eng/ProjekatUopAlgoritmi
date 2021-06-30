@@ -111,8 +111,8 @@ public class ZavrsavanjeVoznjeUlogaVozacForma extends JFrame {
 		txtIdVoznje.setEditable(false);
 		txtAdresaPolaska.setEditable(false);
 		txtAdresaDestinacije.setEditable(false);
-		cbImeMusterije.setEnabled(false);
-		cbImeVozaca.setEnabled(false);
+//		cbImeMusterije.setEnabled(false);
+//		cbImeVozaca.setEnabled(false);
 		
 	}
 	

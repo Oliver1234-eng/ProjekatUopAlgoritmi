@@ -54,10 +54,10 @@ public class Main {
 		loginProzorDispecer.setVisible(true);
 		
 		LoginProzorVozac loginProzorVozac = new LoginProzorVozac(taksiSluzba);
-		loginProzorVozac.setVisible(false);
+		loginProzorVozac.setVisible(true);
 		
 		LoginProzorMusterija loginProzorMusterija = new LoginProzorMusterija(taksiSluzba);
-		loginProzorMusterija.setVisible(false);
+		loginProzorMusterija.setVisible(true);
 		
 		//CRUD za dispecere, vozace i voznje
 	
