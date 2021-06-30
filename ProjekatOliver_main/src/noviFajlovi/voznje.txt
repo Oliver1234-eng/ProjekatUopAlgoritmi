@@ -6,3 +6,4 @@
 6|30.06.2021 15.52|Mol|Novi Sad|TestMusterija|TestVozac|70.0|85min|4|false
 7|30.06.2021 15.52|Becej|Novi Sad|TestMusterija|TestVozac2|45.0|45min|4|false
 8|30.06.2021 15.52|Ada|Novi Sad|TestMusterija|TestVozac3|70.0|90|4|false
+9|30.06.2021 19.10|Mol|Becej|TestMusterija|TestVozac|20.0|20min|4|false

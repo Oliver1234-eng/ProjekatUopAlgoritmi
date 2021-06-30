@@ -12,6 +12,7 @@ import guiPaket.formeZaPrikaz.AukcijaUlogaDispecer;
 import guiPaket.formeZaPrikaz.AutomobiliProzorDispecer;
 import guiPaket.formeZaPrikaz.DispeceriProzorDispecer;
 import guiPaket.formeZaPrikaz.DodeljivanjeVoznjeVozacuUlogaDispecer;
+import guiPaket.formeZaPrikaz.IzvestajCeleTaksiSluzbeUlogaDispecer;
 import guiPaket.formeZaPrikaz.MusterijeProzorDispecer;
 import guiPaket.formeZaPrikaz.PrikazSvihVoznjiProzorDispecer;
 import guiPaket.formeZaPrikaz.VozaciProzorDispecer;
@@ -151,6 +152,15 @@ public class GlavniProzorDispecer extends JFrame {
 				
 				AukcijaUlogaDispecer aukcijaUlogaDispecer = new AukcijaUlogaDispecer(taksiSluzba);
 				aukcijaUlogaDispecer.setVisible(true);
+			}
+		});
+		
+		sumiraneStatistike.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				IzvestajCeleTaksiSluzbeUlogaDispecer izvestajCeleTaksiSluzbeUlogaDispecer = new IzvestajCeleTaksiSluzbeUlogaDispecer(taksiSluzba);
+				izvestajCeleTaksiSluzbeUlogaDispecer.setVisible(true);
 			}
 		});
 		
