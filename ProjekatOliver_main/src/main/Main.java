@@ -44,8 +44,8 @@ public class Main {
 		
 		System.out.println(taksiSluzba.pronadjiDispeceraBinarnaPretraga(1));
 		System.out.println(taksiSluzba.pronadjiAutomobilBinarnaPretraga(2));
-		System.out.println(taksiSluzba.pronadjiVozacaBinarnaPretraga(1));
-		System.out.println(taksiSluzba.pronadjiMusterijuBinarnaPretraga(1));
+		System.out.println(taksiSluzba.pronadjiVozacaBinarnaPretraga(2));
+		System.out.println(taksiSluzba.pronadjiMusterijuBinarnaPretraga(3));
 		System.out.println(taksiSluzba.pronadjiVoznjuBinarnaPretraga(1));
 		
 		//LOGIN PROZORI ZA SVAKU ULOGU KORISNIKA

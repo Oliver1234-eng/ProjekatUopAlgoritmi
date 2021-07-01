@@ -33,7 +33,7 @@ import voznjaPaket.Voznja;
 public class DodeljivanjeVoznjeVozacuUlogaDispecer extends JFrame {
 	
 	private JToolBar mainToolbar = new JToolBar();
-	private JButton btnIzmeni = new JButton();
+	private JButton btnIzmeni = new JButton("Dodeli voznju");
 	
 	private DefaultTableModel tableModel;
 	private JTable voznjeTabela;
@@ -52,9 +52,6 @@ public class DodeljivanjeVoznjeVozacuUlogaDispecer extends JFrame {
 	}
 	
 	private void initGUI() {
-		
-		ImageIcon izmeni = new ImageIcon(getClass().getResource("/slike/edit.gif"));
-		btnIzmeni.setIcon(izmeni);
 		
 		mainToolbar.add(btnIzmeni);
 		add(mainToolbar, BorderLayout.EAST);

@@ -16,7 +16,7 @@ import taksiSluzbaPaket.TaksiSluzba;
 public class NarucivanjeVoznjeProzorMusterija extends JFrame {
 	
 	private JToolBar mainToolbar = new JToolBar();
-	private JButton btnDodaj = new JButton();
+	private JButton btnDodaj = new JButton("Naruci voznju");
 	
 	private TaksiSluzba taksiSluzba;
 	
@@ -31,8 +31,6 @@ public class NarucivanjeVoznjeProzorMusterija extends JFrame {
 	}
 	
 	private void initGUI() {
-		ImageIcon dodaj = new ImageIcon(getClass().getResource("/slike/add.gif"));
-		btnDodaj.setIcon(dodaj);
 		
 		mainToolbar.add(btnDodaj);
 		add(mainToolbar, BorderLayout.NORTH);

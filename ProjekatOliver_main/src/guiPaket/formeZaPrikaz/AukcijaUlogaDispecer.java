@@ -34,7 +34,7 @@ import taksiSluzbaPaket.TaksiSluzba;
 public class AukcijaUlogaDispecer extends JFrame {
 	
 	private JToolBar mainToolbar = new JToolBar();
-	private JButton btnVozac = new JButton();
+	private JButton btnVozac = new JButton("Info o vozacima");
 	
 	private DefaultTableModel tableModel;
 	private JTable vozaciTabela;
@@ -53,8 +53,6 @@ public class AukcijaUlogaDispecer extends JFrame {
 	}
 	
 	private void initGUI() {
-		ImageIcon vozac1 = new ImageIcon(getClass().getResource("/slike/edit.gif"));
-		btnVozac.setIcon(vozac1);
 		
 		mainToolbar.add(btnVozac);
 		add(mainToolbar, BorderLayout.EAST);

@@ -29,6 +29,12 @@ public class AukcijaUlogaDispecerForma extends JFrame {
 	private JLabel lblVozac11UkupnaZarada = new JLabel("44800 din");
 	private JLabel lblVozac1ProsecnaZarada = new JLabel("Prosecna zarada: ");
 	private JLabel lblVozac11ProsecnaZarada = new JLabel("11200 din");
+	private JLabel lblVozac1PetFriendly = new JLabel("Pet-friendly: ");
+	private JLabel lblVozac11PetFriendly = new JLabel("DA");
+	private JLabel lblVozac1Ocena = new JLabel("Ocena: ");
+	private JLabel lblVozac11Ocena = new JLabel("4.5");
+	private JLabel lblVozac1StarostVozila = new JLabel("Starost vozila: ");
+	private JLabel lblVozac11StarostVozila = new JLabel("2010. godiste");
 	
 	private JLabel lblVozac2 = new JLabel("TEST VOZAC 2");
 	private JLabel lblVozac22 = new JLabel("");
@@ -46,6 +52,12 @@ public class AukcijaUlogaDispecerForma extends JFrame {
 	private JLabel lblVozac22UkupnaZarada = new JLabel("24600 din");
 	private JLabel lblVozac2ProsecnaZarada = new JLabel("Prosecna zarada: ");
 	private JLabel lblVozac22ProsecnaZarada = new JLabel("8200 din");
+	private JLabel lblVozac2PetFriendly = new JLabel("Pet-friendly: ");
+	private JLabel lblVozac22PetFriendly = new JLabel("NE");
+	private JLabel lblVozac2Ocena = new JLabel("Ocena: ");
+	private JLabel lblVozac22Ocena = new JLabel("4.2");
+	private JLabel lblVozac2StarostVozila = new JLabel("Starost vozila: ");
+	private JLabel lblVozac22StarostVozila = new JLabel("2020. godiste");
 	
 	private JLabel lblVozac3 = new JLabel("TEST VOZAC 3");
 	private JLabel lblVozac33 = new JLabel("");
@@ -63,6 +75,12 @@ public class AukcijaUlogaDispecerForma extends JFrame {
 	private JLabel lblVozac33UkupnaZarada = new JLabel("14200 din");
 	private JLabel lblVozac3ProsecnaZarada = new JLabel("Prosecna zarada: ");
 	private JLabel lblVozac33ProsecnaZarada = new JLabel("14200 din");
+	private JLabel lblVozac3PetFriendly = new JLabel("Pet-friendly: ");
+	private JLabel lblVozac33PetFriendly = new JLabel("NE");
+	private JLabel lblVozac3Ocena = new JLabel("Ocena: ");
+	private JLabel lblVozac33Ocena = new JLabel("3.8");
+	private JLabel lblVozac3StarostVozila = new JLabel("Starost vozila: ");
+	private JLabel lblVozac33StarostVozila = new JLabel("2020. godiste");
 	
 	private JButton btnZatvori = new JButton("Zatvori");
 	
@@ -84,7 +102,7 @@ public class AukcijaUlogaDispecerForma extends JFrame {
 	
 	private void initGUI() {
 		
-		MigLayout layout = new MigLayout("wrap 2", "[][]", "[][][][][][][][][][][][][][][][][][][][][][][][][][][][][]20[]" );
+		MigLayout layout = new MigLayout("wrap 2", "[][]", "[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]20[]" );
 		setLayout(layout);
 		
 		add(lblVozac1);
@@ -103,10 +121,17 @@ public class AukcijaUlogaDispecerForma extends JFrame {
 		add(lblVozac11UkupnaZarada);
 		add(lblVozac1ProsecnaZarada);
 		add(lblVozac11ProsecnaZarada);
+		add(lblVozac1PetFriendly);
+		add(lblVozac11PetFriendly);
+		add(lblVozac1Ocena);
+		add(lblVozac11Ocena);
+		add(lblVozac1StarostVozila);
+		add(lblVozac11StarostVozila);
 		add(new JLabel());
 		add(new JLabel());
 		add(new JLabel());
 		add(new JLabel());
+		
 		
 		add(lblVozac2);
 		add(lblVozac22);
@@ -124,6 +149,12 @@ public class AukcijaUlogaDispecerForma extends JFrame {
 		add(lblVozac22UkupnaZarada);
 		add(lblVozac2ProsecnaZarada);
 		add(lblVozac22ProsecnaZarada);
+		add(lblVozac2PetFriendly);
+		add(lblVozac22PetFriendly);
+		add(lblVozac2Ocena);
+		add(lblVozac22Ocena);
+		add(lblVozac2StarostVozila);
+		add(lblVozac22StarostVozila);
 		add(new JLabel());
 		add(new JLabel());
 		add(new JLabel());
@@ -145,8 +176,15 @@ public class AukcijaUlogaDispecerForma extends JFrame {
 		add(lblVozac33UkupnaZarada);
 		add(lblVozac3ProsecnaZarada);
 		add(lblVozac33ProsecnaZarada);
+		add(lblVozac3PetFriendly);
+		add(lblVozac33PetFriendly);
+		add(lblVozac3Ocena);
+		add(lblVozac33Ocena);
+		add(lblVozac3StarostVozila);
+		add(lblVozac33StarostVozila);
 		add(new JLabel());
 		add(new JLabel());
+		
 		add(new JLabel());
 		add(btnZatvori);
 		
