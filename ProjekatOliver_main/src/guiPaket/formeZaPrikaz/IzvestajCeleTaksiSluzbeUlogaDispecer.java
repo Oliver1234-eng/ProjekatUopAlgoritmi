@@ -49,7 +49,7 @@ public class IzvestajCeleTaksiSluzbeUlogaDispecer extends JFrame {
 		add(mainToolbar, BorderLayout.NORTH);
 		
 		String zaglavlje[] = {"Ukupan broj voznji", "Broj voznji narucenih putem telefona", "Broj aktivnih vozaca", "Prosecno trajanje voznje", "Prosecan broj km", "Sveukupna zarada", "Prosecna zarada po voznji"};
-		Object sadrzaj[][] = {{"8", "8", "3", "50.25 min", "51.25 km", "83.600 din", "10.450 din"}};
+		Object sadrzaj[][] = {{"12", "12", "3", "41.83 min", "43.33 km", "106.400 din", "8.866,67 din"}};
 		
 		tableModel = new DefaultTableModel(sadrzaj, zaglavlje);
 		ceoIzvestajTabela = new JTable(tableModel);

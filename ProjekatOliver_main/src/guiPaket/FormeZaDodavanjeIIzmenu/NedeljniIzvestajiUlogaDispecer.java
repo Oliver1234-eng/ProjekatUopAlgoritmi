@@ -16,28 +16,28 @@ public class NedeljniIzvestajiUlogaDispecer extends JFrame {
 	private JLabel lblNedelja = new JLabel("NEDELJA 28.06.2021. - 04.07.2021.");
 	private JLabel lblNedelja2 = new JLabel("");
 	private JLabel lblUkupanBrojVoznji = new JLabel("UKUPAN BROJ VOZNJI: ");
-	private JLabel lblUkupanBrojVoznji2 = new JLabel("9");
+	private JLabel lblUkupanBrojVoznji2 = new JLabel("12");
 	private JLabel lblProsecnoTrajanjeVoznji = new JLabel("PROSECNO TRAJANJE VONJI: ");
-	private JLabel lblProsecnoTrajanjeVoznji2 = new JLabel("50.25 min");
+	private JLabel lblProsecnoTrajanjeVoznji2 = new JLabel("41.83 min");
 	private JLabel lblProsecanBrojKilometara = new JLabel("PROSECAN BROJ KM: ");
-	private JLabel lblProsecanBrojKilometara2 = new JLabel("51.25 km");
+	private JLabel lblProsecanBrojKilometara2 = new JLabel("43.33 km");
 	private JLabel lblSveukupnaZarada = new JLabel("SVEUKUPNA ZARADA");
-	private JLabel lblSveukupnaZarada2 = new JLabel("83.600 din");
+	private JLabel lblSveukupnaZarada2 = new JLabel("106.400 din");
 	private JLabel lblProsecnaZaradaPoVoznji = new JLabel("PROSECNA ZARADA PO VOZNJI");
-	private JLabel lblProsecnaZaradaPoVoznji2 = new JLabel("10.450 din");
+	private JLabel lblProsecnaZaradaPoVoznji2 = new JLabel("8.866,67 din");
 	
 	private JLabel lblNedelja3 = new JLabel("NEDELJA 05.07.2021. - 12.07.2021.");
 	private JLabel lblNedelja4 = new JLabel("");
 	private JLabel lblUkupanBrojVoznji3 = new JLabel("UKUPAN BROJ VOZNJI: ");
-	private JLabel lblUkupanBrojVoznji4 = new JLabel("9");
+	private JLabel lblUkupanBrojVoznji4 = new JLabel("NEPOZNATO");
 	private JLabel lblProsecnoTrajanjeVoznji3 = new JLabel("PROSECNO TRAJANJE VONJI: ");
-	private JLabel lblProsecnoTrajanjeVoznji4 = new JLabel("50.25 min");
+	private JLabel lblProsecnoTrajanjeVoznji4 = new JLabel("NEPOZNATO");
 	private JLabel lblProsecanBrojKilometara3 = new JLabel("PROSECAN BROJ KM: ");
-	private JLabel lblProsecanBrojKilometara4 = new JLabel("51.25 km");
+	private JLabel lblProsecanBrojKilometara4 = new JLabel("NEPOZNATO");
 	private JLabel lblSveukupnaZarada3 = new JLabel("SVEUKUPNA ZARADA");
-	private JLabel lblSveukupnaZarada4 = new JLabel("83.600 din");
+	private JLabel lblSveukupnaZarada4 = new JLabel("NEPOZNATO");
 	private JLabel lblProsecnaZaradaPoVoznji3 = new JLabel("PROSECNA ZARADA PO VOZNJI");
-	private JLabel lblProsecnaZaradaPoVoznji4 = new JLabel("10.450 din");
+	private JLabel lblProsecnaZaradaPoVoznji4 = new JLabel("NEPOZNATO");
 	
 	private JButton btnZatvori = new JButton("Zatvori");
 	

@@ -35,7 +35,6 @@ public class TaksiSluzba {
 	private ArrayList<Musterija> musterije;
 	private ArrayList<Voznja> voznje;
 	
-	
 	public TaksiSluzba() {
 		this.dispeceri = new ArrayList<Dispecer>();
 		this.automobili = new ArrayList<Automobil>();
@@ -275,7 +274,9 @@ public class TaksiSluzba {
 			}
 		}
 		return neobrisaneMusterije;
-	} 
+	}
+	
+	//METODE ZA IZMENU I BRISANJE ENTITETA KROZ KONZOLU
 	
 	public Dispecer izmeniDispeceraCRUD(Dispecer d) {
 		ArrayList<Dispecer> dispeceri = getDispeceri();

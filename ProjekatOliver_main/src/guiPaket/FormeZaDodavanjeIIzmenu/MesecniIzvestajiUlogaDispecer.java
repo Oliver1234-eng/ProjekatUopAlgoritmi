@@ -18,26 +18,26 @@ public class MesecniIzvestajiUlogaDispecer extends JFrame {
 	private JLabel lblUkupanBrojVoznji = new JLabel("UKUPAN BROJ VOZNJI: ");
 	private JLabel lblUkupanBrojVoznji2 = new JLabel("9");
 	private JLabel lblProsecnoTrajanjeVoznji = new JLabel("PROSECNO TRAJANJE VONJI: ");
-	private JLabel lblProsecnoTrajanjeVoznji2 = new JLabel("50.25 min");
+	private JLabel lblProsecnoTrajanjeVoznji2 = new JLabel("46.89 min");
 	private JLabel lblProsecanBrojKilometara = new JLabel("PROSECAN BROJ KM: ");
-	private JLabel lblProsecanBrojKilometara2 = new JLabel("51.25 km");
+	private JLabel lblProsecanBrojKilometara2 = new JLabel("47.78 km");
 	private JLabel lblSveukupnaZarada = new JLabel("SVEUKUPNA ZARADA");
-	private JLabel lblSveukupnaZarada2 = new JLabel("83.600 din");
+	private JLabel lblSveukupnaZarada2 = new JLabel("87.800 din");
 	private JLabel lblProsecnaZaradaPoVoznji = new JLabel("PROSECNA ZARADA PO VOZNJI");
-	private JLabel lblProsecnaZaradaPoVoznji2 = new JLabel("10.450 din");
+	private JLabel lblProsecnaZaradaPoVoznji2 = new JLabel("9.755,55 din");
 	
 	private JLabel lblMesec3 = new JLabel("JUL 2021. GODINE");
 	private JLabel lblMesec4 = new JLabel("");
 	private JLabel lblUkupanBrojVoznji3 = new JLabel("UKUPAN BROJ VOZNJI: ");
-	private JLabel lblUkupanBrojVoznji4 = new JLabel("9");
+	private JLabel lblUkupanBrojVoznji4 = new JLabel("4");
 	private JLabel lblProsecnoTrajanjeVoznji3 = new JLabel("PROSECNO TRAJANJE VONJI: ");
-	private JLabel lblProsecnoTrajanjeVoznji4 = new JLabel("50.25 min");
+	private JLabel lblProsecnoTrajanjeVoznji4 = new JLabel("26.67 min");
 	private JLabel lblProsecanBrojKilometara3 = new JLabel("PROSECAN BROJ KM: ");
-	private JLabel lblProsecanBrojKilometara4 = new JLabel("51.25 km");
+	private JLabel lblProsecanBrojKilometara4 = new JLabel("30 km");
 	private JLabel lblSveukupnaZarada3 = new JLabel("SVEUKUPNA ZARADA");
-	private JLabel lblSveukupnaZarada4 = new JLabel("83.600 din");
+	private JLabel lblSveukupnaZarada4 = new JLabel("18.600 din");
 	private JLabel lblProsecnaZaradaPoVoznji3 = new JLabel("PROSECNA ZARADA PO VOZNJI");
-	private JLabel lblProsecnaZaradaPoVoznji4 = new JLabel("10.450 din");
+	private JLabel lblProsecnaZaradaPoVoznji4 = new JLabel("6.200 din");
 	
 	private JButton btnZatvori = new JButton("Zatvori");
 	
