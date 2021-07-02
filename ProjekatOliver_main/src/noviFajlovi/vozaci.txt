@@ -2,6 +2,7 @@
 1|TestVozac|testVozac123|ImeVozac|PrezimeVozac|JMBGVozac|AdresaVozac|1|0638924371|false|60000.6|10|NS-153-HE
 2|TestVozac2|testVozac1234|ImeVozac2|PrezimeVozac2|JMBGVozac2|AdresaVozac2|1|0638924371|false|55000.6|11|NS-253-JS
 3|TestVozac3|testVozac12345|ImeVozac3|PrezimeVozac3|JMBGVozac3|AdresaVozac3|1|0638924371|false|58000.6|12|NS-251-JS
+4|Vozac|Vozac|Vozac|Vozacevic|JMBGG|ADRESA|1|0627381921|true|65000.0|4|NS-153-HE
 5|Oliver123|Oliver123|Oliver|Kojic|JMBG|Ive Lole Ribara 9|1|0637504479|true|65000.0|6|NS-153-HE
 6|Proba123|Proba123|Proba1|Probic|JMBG|ProbaAdresa|0|BrTel|true|65000.0|13|NS-153-HE
-4|Vozac|Vozac|Vozac|Vozacevic|JMBGG|ADRESA|1|0627381921|true|65000.0|4|NS-153-HE
+4|OdbranaUOP|OdbranaUOP|UOP|UOP|JMBG|ADRESA|0|0640982761|false|70000.0|4|NS-761-GE
