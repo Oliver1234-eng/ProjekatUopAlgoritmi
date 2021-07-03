@@ -6,3 +6,4 @@
 5|Oliver123|Oliver123|Oliver|Kojic|JMBG|Ive Lole Ribara 9|1|0637504479|true|65000.0|6|NS-153-HE
 6|Proba123|Proba123|Proba1|Probic|JMBG|ProbaAdresa|0|BrTel|true|65000.0|13|NS-153-HE
 4|OdbranaUOP|OdbranaUOP|UOP|UOP|JMBG|ADRESA|0|0640982761|false|70000.0|4|NS-761-GE
+5|TestPred|TestPred|Test|Test|JMBG|Adresa|1|06088219712|false|55000.0|5|NS-261-HH
