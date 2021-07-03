@@ -10,6 +10,8 @@
 10|01.07.2021 16.31|Becej|Novi Becej|TestMusterija|TestVozac|25.0|20min|4|false
 11|01.07.2021 16.34|Becej|Srbobran|TestMusterija|TestVozac|25.0|20min|4|false
 12|01.07.2021 18.18|Srbobran|Novi Sad|TestMusterija|TestVozac|40.0|40min|4|false
-13|02.07.2021 19.38|A1|A2|TestMusterija|TestVozac|75.0|40min|4|false
-14|03.07.2021 09.51|PredIspit|PredIspit|TestMusterija|TestPred|0.0|0|5|false
-15|03.07.2021 09.52|PredOdbranu|PredOdbranu|TestMusterija|TestVozac|60.0|40min|4|false
+13|02.07.2021 19.38|A1|A2|TestMusterija|TestVozac|75.0|40min|4|true
+14|03.07.2021 09.51|PredIspit|PredIspit|TestMusterija|TestPred|0.0|0|5|true
+15|03.07.2021 09.52|PredOdbranu|PredOdbranu|TestMusterija|TestVozac|60.0|40min|4|true
+16|03.07.2021 13.16|ADRESA1|ADRESA2|TestMusterija|TestVozac|50.0|30min|4|true
+17|03.07.2021 18.23|A1|A2|TestMusterija|TestVozac|75.0|37min|4|true
