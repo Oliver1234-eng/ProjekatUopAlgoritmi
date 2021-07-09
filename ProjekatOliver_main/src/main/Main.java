@@ -42,11 +42,11 @@ public class Main {
 		
 		//BINARNA PRETRAGA
 		
-//		System.out.println(taksiSluzba.pronadjiDispeceraBinarnaPretraga(1));
-//		System.out.println(taksiSluzba.pronadjiAutomobilBinarnaPretraga(2));
-//		System.out.println(taksiSluzba.pronadjiVozacaBinarnaPretraga(3));
-//		System.out.println(taksiSluzba.pronadjiMusterijuBinarnaPretraga(1));
-//		System.out.println(taksiSluzba.pronadjiVoznjuBinarnaPretraga(1));
+		System.out.println(taksiSluzba.pronadjiDispeceraBinarnaPretraga(1));
+		System.out.println(taksiSluzba.pronadjiAutomobilBinarnaPretraga(2));
+		System.out.println(taksiSluzba.pronadjiVozacaBinarnaPretraga(2));
+		System.out.println(taksiSluzba.pronadjiMusterijuBinarnaPretraga(3));
+		System.out.println(taksiSluzba.pronadjiVoznjuBinarnaPretraga(2));
 		
 		//LOGIN PROZORI ZA SVAKU ULOGU KORISNIKA
 		

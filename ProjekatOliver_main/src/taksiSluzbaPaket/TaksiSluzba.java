@@ -863,7 +863,7 @@ public class TaksiSluzba {
 			}
 			
 			else if (id > dispeceri.get(middle).getIdKorisnika()) {
-				right = middle + 1;
+				left = middle + 1;
 			}
 			
 			else {
@@ -886,7 +886,7 @@ public class TaksiSluzba {
 			}
 			
 			else if (id > automobili.get(middle).getIdAutomobila()) {
-				right = middle + 1;
+				left = middle + 1;
 			}
 			
 			else {
@@ -909,7 +909,7 @@ public class TaksiSluzba {
 			}
 			
 			else if (id > vozaci.get(middle).getIdKorisnika()) {
-				right = middle + 1;
+				left = middle + 1;
 			}
 			
 			else {
@@ -932,7 +932,7 @@ public class TaksiSluzba {
 			}
 			
 			else if (id > musterije.get(middle).getIdKorisnika()) {
-				right = middle + 1;
+				left = middle + 1;
 			}
 			
 			else {
@@ -955,7 +955,7 @@ public class TaksiSluzba {
 			}
 			
 			else if (id > voznje.get(middle).getIdVoznje()) {
-				right = middle + 1;
+				left = middle + 1;
 			}
 			
 			else {

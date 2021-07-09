@@ -3,3 +3,4 @@
 3|TestMusterija2|testMusterija1234|ImeMusterija2|PrezimeMusterija2|JMBGMusterija2|AdresaMusterija2|0|0639817921|false
 4|TestMusterija3|testMusterija12345|ImeMusterija3|PrezimeMusterija3|JMBGMusterija3|AdresaMusterija3|0|0639817921|false
 5|Oliver123|Oliver123|Oliver1|Kojic|JMBG|Ive Lole Ribara 9|1|0637504479|false
+6|Algoritmi|Algoritmi|OdbranaAISP|OdbranaAISP|JMBG|ADRESA|1|0608271821|false
